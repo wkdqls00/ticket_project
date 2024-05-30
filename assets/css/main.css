@@ -1,0 +1,180 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+ul {
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+li, ol, dl {
+  list-style: none;
+}
+
+a {
+  text-decoration: none
+}
+
+.clear {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+
+/* LEFT : navbar */
+.lnb_area {
+  background: #fff;
+  height: 100vh;
+  width: 280px;
+  vertical-align: top;
+  box-shadow: 1px 0 20px rgba(0, 0, 0, .08);
+  position: fixed;
+  top: 55px;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.nav {
+  flex-wrap: wrap;
+}
+
+.navbar {
+  background: #fff;
+  border-radius: 0;
+  border: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  position: relative;
+}
+
+.navbar .main_menu {
+  float: left;
+  padding: 0;
+  padding-bottom: 50px;
+  display: flex !important;
+}
+
+.navbar_collapse {
+  align-items: center;
+}
+
+.navbar_nav {
+  float: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar .navbar_nav>li {
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.navbar .menu_title {
+  color: #41434d;
+  clear: both;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 50px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.navbar .navbar_nav li>a {
+  background: 0 0 !important;
+  color: #607d8b;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 26px;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+}
+
+.navbar .navbar_nav li.menu_item_has_children {
+  position: relative;
+}
+
+.navbar .navbar_nav li.menu_item_has_children a {
+  line-height: 30px;  
+}
+
+.navbar .navbar_nav li.menu_item_has_children a:before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #607d8b #607d8b transparent transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: all .25s ease;
+}
+
+/* contents */
+
+.contents {
+  background: #f1f2f7;
+  margin-left: 280px;
+  margin-top: 55px;
+}
+
+.contents header.header {
+  background: #fff;
+  border-bottom: 1px solid #e8e9ed;
+  height: 55px;
+  position: fixed;
+  clear: both;
+  padding: 0 30px;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.contents .top_left {
+  float: left;
+  width: 350px;
+}
+
+.contents .top_left h3 {
+  margin: 0;
+  line-height: 57px;
+}
