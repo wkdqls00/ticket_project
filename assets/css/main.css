@@ -1,55 +1,8 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+/* padding */
 
-* {
-  box-sizing: border-box;
+.pb-0 {
+  padding-bottom: 0px !important;
 }
-
-body {
-  margin: 0;
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-}
-
-ul {
-  padding-inline-start: 0;
-  margin: 0;
-}
-
-li, ol, dl {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  transition: all .25s ease;
-}
-
-.clear {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-input,
-button,
-select,
-optgroup,
-textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-button,
-input {
-  overflow: visible;
-}
-
-button,
-select {
-  text-transform: none;
-}
-
 
 /* LEFT : navbar */
 .lnb_area {
@@ -197,4 +150,206 @@ select {
 .contents .top_left h3 {
   margin: 0;
   line-height: 57px;
+}
+
+/* 내용 */
+.info_main {
+  float: left;
+  padding: 1.875em;
+  width: 100%;
+}
+
+.info_header {
+  height: 60px;
+  width: 100%;
+  background-color: #fff;
+  top: 0;
+  border-bottom: 1px solid #e8e9ed;
+  padding: 10px 25px;
+  align-items: center;
+  display: flex;
+}
+
+.info_header > h3 {
+  margin: 0;
+}
+
+/* 검색창 */
+
+.member_search_area {
+  display: flex;
+  align-items: center;
+}
+
+.member_search_input {
+  width: 580px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1.5px solid #e8e9ed;
+  background: #ffffff;
+  padding: 10px 45px 10px 20px;
+}
+
+.member_search_input::placeholder {
+  font-size: 14px;
+}
+
+/* 검색 버튼 */
+
+.search_btn {
+  height: 34px;
+  width: 50px;
+  border: 1px solid #272727;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.search_btn:hover {
+  background: #cecece;
+}
+
+.search_btn > img {
+  width: 24px;
+  margin: 0 auto;
+}
+
+/* 삭제 버튼 */
+
+.member_delete_area {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.delete_button {
+  width: 55px;
+  height: 34px;
+  border: none;
+  border-radius: 10px;
+  background: #fb9678;
+  cursor: pointer;
+}
+
+.delete_button:hover {
+  background: #da8267;
+}
+
+.delete_button > span {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* table_area */
+
+.search_result_txt {
+  display: inline-block;
+  margin-block: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.info_table_area {
+  width: 100%;
+  overflow-y: auto;
+}
+
+table {
+  font-size: .8em;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  table-layout: fixed;
+  word-break: break-all;
+  height: auto;
+}
+
+th {
+  text-align: center;
+}
+  
+thead {
+  font-weight: bold;
+  color: #fff;
+  background: #a9b7c1;
+}
+  
+ td, th {
+  padding: 1em .5em;
+  vertical-align: middle;
+}
+  
+ td {
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  background: #fff;
+}
+
+/* 회원 추가 */
+
+.member_insert {
+  background-color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.member_profile_insert {
+  width: 120px;
+  height: 120px;
+  border-radius: 120px;
+  background-size: 120px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.member_profile_insert > .upload_profile {
+  display: none;
+}
+
+.member_profile_insert > label {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  background-image: url(/assets/img/profile_insert.png);
+  background-color: #fff;
+  float: right;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position-y: 4px;
+  background-position-x: 4px;
+  border: 1px solid #cecece;
+}
+
+.member_profile_insert > label:hover {
+  background-color: #e1e1e1;
+}
+
+.member_form_area {
+  
+}
+
+.insert_input_area {
+  display: table;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.insert_input_area > label {
+  font-size: 16px;
+  margin-right: 20px;
+  color: #607d8b;
+  width: 70px;
+  display: inline-block;
+}
+
+.member_insert_input {
+  width: 500px;
+  border: none;
+  border-bottom: 1px solid #a9b7c1;
 }
