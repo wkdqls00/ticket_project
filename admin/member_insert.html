@@ -84,7 +84,12 @@
             </div>
             <div class="insert_input_area">
               <label>이메일</label>
-              <input type="text" class="member_insert_input">
+              <input type="text" class="member_insert_input" style="width: 40%; margin-right: 5%">
+              <select name="email_site" style="width: 50%">
+                <option>@naver.com</option>
+                <option>@google.com</option>
+                <option>@daum.net</option>
+              </select>
             </div>
             <div class="insert_input_area">
               <label>비밀번호</label>
@@ -96,11 +101,14 @@
             </div>
             <div class="insert_input_area">
               <label>생년월일</label>
-              <input type="text" class="member_insert_input">
+              <input type="date">
             </div>
             <div class="insert_input_area">
               <label>성별</label>
-              <input type="text" class="member_insert_input">
+              <select name="gender">
+                <option value="여자">여자</option>
+                <option value="남자">남자</option>
+              </select>
             </div>
             <div class="insert_input_area">
               <label>주소</label>
