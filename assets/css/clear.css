@@ -79,3 +79,7 @@ input[type="file"] {
   overflow: hidden;
   border: 0;
 }
+
+select {
+  word-wrap: normal;
+}

@@ -252,7 +252,7 @@
   display: inline-block;
   margin-block: 10px;
   margin-left: 10px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .info_table_area {
@@ -347,7 +347,7 @@ thead {
 }
 
 .insert_input_area > label {
-  font-size: 16px;
+  font-size: 14px;
   margin-right: 20px;
   color: #607d8b;
   width: 90px;
@@ -382,4 +382,44 @@ thead {
 .insert_btn > span {
   font-size: 14px;
   color: #fff;
+}
+
+/* select */
+
+select {
+  outline: none;
+  padding: 10px 0;
+  border: none;
+  line-height: 20px;
+  padding: 8px 12px !important;
+  width: 100%;
+  height: 32px;
+  background-color: #fff;
+  border: 1px solid #e8eaf1 !important;
+  color: #242428;
+  font-size: 12px !important;
+  font-weight: 400;
+  font-family: "Pretendard";
+  line-height: 16px;
+  gap: 10px;
+}
+
+/* date */
+
+input[type="date"] {
+  outline: none;
+  padding: 10px 0;
+  border: none;
+  line-height: 20px;
+  padding: 8px 12px !important;
+  width: 100%;
+  height: 32px;
+  background-color: #fff;
+  border: 1px solid #e8eaf1 !important;
+  color: #242428;
+  font-size: 12px !important;
+  font-weight: 400;
+  font-family: "Pretendard";
+  line-height: 16px;
+  gap: 10px;
 }
