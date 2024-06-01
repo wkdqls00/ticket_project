@@ -4,6 +4,12 @@
   padding-bottom: 0px !important;
 }
 
+/* margin */
+
+.center {
+  margin: 0 auto;
+}
+
 /* LEFT : navbar */
 .lnb_area {
   background: #fff;
@@ -292,7 +298,7 @@ thead {
 
 .member_insert {
   background-color: #fff;
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
   border-radius: 10px;
   padding: 30px;
@@ -335,7 +341,7 @@ thead {
 }
 
 .insert_input_area {
-  display: table;
+  display: flex;
   margin: 0 auto;
   padding-top: 20px;
 }
@@ -344,12 +350,36 @@ thead {
   font-size: 16px;
   margin-right: 20px;
   color: #607d8b;
-  width: 70px;
+  width: 90px;
   display: inline-block;
 }
 
 .member_insert_input {
-  width: 500px;
+  width: 100%;
   border: none;
   border-bottom: 1px solid #a9b7c1;
+}
+
+.insert_btn_area {
+  display: flex;
+}
+
+/* 추가 버튼 */
+
+.insert_btn {
+  width: 70%;
+  height: 34px;
+  border: none;
+  border-radius: 10px;
+  background: #a3bdfd;
+  cursor: pointer;
+}
+
+.insert_btn:hover {
+  background: #7e96d2;
+}
+
+.insert_btn > span {
+  font-size: 14px;
+  color: #fff;
 }
