@@ -704,6 +704,40 @@ body {
   overflow: hidden;
 }
 
+.nano_content {
+  position: relative !important;
+  margin-right: 0 !important;
+  padding: 7px 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.chat > li {
+  position: relative;
+  padding: 7px 20px 7px 14px;
+}
+
+.chat > li .itemLink {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+}
+
+.chat > li .thum {
+  position: relative;
+  display: block;
+}
+
+.thum img {
+  border-radius: 50%;
+  vertical-align: top;
+}
+
 /* 테마 색상 */
 
 .bg_blue {
