@@ -1316,13 +1316,13 @@ body {
   border: 1px solid rgba(0,0,0,0.1);
 }
 
-.cCommentWrite .writeWrap .flexbox {
+.cCommentWrite .flexBox {
   position: relative;
   display: flex;
   align-items: flex-start;
 }
 
-.cCommentWrite .writeWrap .flexbox > * {
+.cCommentWrite .writeWrap .flexBox > * {
   display: block;
 }
 
@@ -1334,18 +1334,18 @@ body {
   margin-left: 8px;
 }
 
-.cCommentWrite .profileStatus .current {
+.cCommentWrite .current {
   display: inline-block;
   font-size: 0;
 }
 
-.cCommentWrite .profileStatus .uProfile .profileInner {
+.messageInputProfileView .profileInner {
   display: inline-block;
   width: 21px;
   height: 21px;
 }
 
-.cCommentWrite .profileStatus .uProfile .profileInner::before {
+.messageInputProfileView .profileInner::before {
   width: 10px;
   height: 10px;
   overflow: hidden;
@@ -1361,6 +1361,73 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 50%;
+}
+
+.cCommentWrite .mentionsWrap {
+  position: relative;
+  flex: 1 0 auto;
+  min-width: 0;
+  font-size: 0;
+}
+
+.cCommentWrite .writeWrap .uInputComment {
+  min-height: 33px;
+  background: 0 0;
+  padding: 0;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.mentions-input {
+  position: relative;
+  max-height: 180px;
+  overflow: hidden;
+  z-index: 3;
+  overflow-y: hidden !important;
+}
+
+.mentions {
+  height: 32px;
+  overflow: hidden;
+  padding: 7px 15px 0 10px;
+  border: 0;
+  line-height: 1.54;
+  font-size: 13px;
+  vertical-align: top;
+  text-align: left;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.mentions>div {
+  left: 10px;
+  right: 15px;
+  position: absolute;
+  color: transparent;
+  top: 7px;
+}
+
+.mentions-input textarea {
+  display: inline-block;
+  overflow: hidden;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: -1px;
+  min-height: 32px;
+  background: 0 0;
+  resize: none;
+  padding: 7px 15px 0 10px;
+  border: 0;
+  line-height: 1.54;
+  font-size: 13px;
+  vertical-align: top;
+  text-align: left;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 /* 테마 색상 */

@@ -32,6 +32,8 @@ header {
   justify-content: space-between;
 }
 
+
+
 .logo_search_area {
   display: flex;
   align-items: center;
@@ -63,6 +65,10 @@ header {
   content: '';
 }
 
+.bg_blue .logo::before {
+  background-color: #fff;
+}
+
 .search_input {
   position: relative;
   flex: 0 0 auto;
@@ -78,6 +84,11 @@ header {
   border-radius: 14px;
   border: 1px solid rgba(0, 0, 0, .05);
   background-color: #F5F6F8;
+}
+
+.bg_blue .headerInner .search_input {
+  border: 1px solid rgba(0, 0, 0, .05);
+  background: rgba(0, 0, 0, .03);
 }
 
 .input_serach {
@@ -112,6 +123,10 @@ header {
   opacity: .6;
 }
 
+.bg_blue .btn_search::before {
+  background-color: #fff;
+}
+
 .inputBandSearch {
   flex: 0 1 auto;
   width: 100%;
@@ -120,6 +135,14 @@ header {
   font-size: 12px;
   color: #222;
   background-color: transparent;
+}
+
+.bg_blue .search_input .inputBandSearch {
+  color: #ebebeb;
+}
+
+.bg_blue .inputBandSearch::placeholder {
+  color: rgba(235,235,235,.5)
 }
 
 .widgetList {
@@ -176,6 +199,10 @@ header {
   content: '';
 }
 
+.bg_blue .btnMySetting::after {
+  background-color: rgba(255, 255, 255, .4);
+}
+
 .uProfile {
   flex: 0 0 auto;
   display: inline-block;
@@ -227,4 +254,10 @@ header {
   border: 1px solid rgba(0, 0, 0, .05);
   border-radius: 50%;
   content: '';  
+}
+
+/* 색상 */
+
+.bg_white {
+  background-color: #fff;
 }
