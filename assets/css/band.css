@@ -204,7 +204,7 @@ body {
   display: inline-block;
   background-repeat: no-repeat;
   content: '';
-  background-image: url(/assets/img/spr_icons.png);
+  background-image: url(https://ssl.pstatic.net/cmstatic/webclient/dres/20240528100621/images/spr_icons.png);
   background-position: 0 -446px;
 }
 
@@ -1308,6 +1308,10 @@ body {
   mask-image: url(https://ssl.pstatic.net/cmstatic/webclient/dres/20240528100621/images/spr_svg.svg#bar_plus);
 }
 
+.uIconCommentPlus:hover {
+  background-color: #222;
+}
+
 .cCommentWrite .writeWrap {
   flex: 1 1 auto;
   width: 100%;
@@ -1428,6 +1432,39 @@ body {
   text-align: left;
   overflow-wrap: break-word;
   white-space: pre-wrap;
+}
+
+.btnSticker {
+  width: 46px;
+  height: 33px;
+}
+
+.uIconCommentSticker {
+  display: inline-block;
+  vertical-align: top;
+  width: 24px;
+  height: 24px;
+  mask-size: 24px 24px;
+  background-color: #999;
+  mask-image: url(https://ssl.pstatic.net/cmstatic/webclient/dres/20240528100621/images/spr_svg.svg#bar_sticker);
+}
+
+.uIconCommentSticker:hover {
+  background-color: #222;
+}
+
+.submitWrap {
+  position: relative;
+  margin: 0 10px 0 8px;
+}
+
+.writeSubmit {
+  min-width: 64px;
+  height: 35px;
+  padding: 0 15px;
+  border-radius: 18px;
+  color: #eceeef;
+  background: #474e60;
 }
 
 /* 테마 색상 */
