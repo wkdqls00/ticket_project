@@ -599,6 +599,330 @@ body {
   line-height: 1.25;
 }
 
+/* 게시글 내용 목록 */
+
+.postLayoutView {
+  background-color: #fff;
+  box-shadow: 0 1.4px 1.3px 0 rgba(62, 73, 89, 0.1);
+}
+
+.contentsCard {
+  margin-bottom: 11px;
+  background-color: #fff;
+  position: relative;
+}
+
+.postWriter {
+  position: relative;
+  height: 65px;
+  background-color: transparent;
+  z-index: 11;
+  cursor: pointer;
+  padding-top: 20px;
+  align-items: flex-start;
+  display: flex;
+}
+
+.postWriter::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #fff;
+  content: '';
+}
+
+.postWriter .uProfile {
+  margin-left: 22px;
+  margin-right: 10px;
+  z-index: 12;
+}
+
+.uProfile.-leader::before {
+  position: absolute;
+  z-index: 1;
+  right: -2px;
+  bottom: -2px;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+  display: block;
+  background-repeat: no-repeat;
+  content: '';
+  background-image: url(https://ssl.pstatic.net/cmstatic/webclient/dres/20240528100621/images/spr_icons.png);
+  background-position: -570px -732px;
+}
+
+.postWriter .profileInner {
+  width: 40px;
+  height: 40px;
+}
+
+.postWriter .profileInner::before {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  display: block;
+  background-repeat: no-repeat;
+  content: '';
+  background-image: url(https://ssl.pstatic.net/cmstatic/webclient/dres/20240528100621/images/spr_icons.png);
+  background-position: -572px -690px;
+  margin: -10px 0 0 -10px;
+}
+
+.postWriterInfoWrap {
+  display: block;
+  flex: 1 1 auto;
+  max-width: 396px;
+  position: relative;
+  margin-right: 41px;
+  min-width: 0;
+  padding-top: 2px;
+  white-space: nowrap;
+  color: #999;
+  line-height: 1.4;
+  z-index: 12;
+  overflow: hidden;
+}
+
+.postWriterInfoWrap .name {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-overflow: ellipsis;
+}
+
+.postWriterInfoWrap .text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+  margin-top: 3px;
+}
+
+.postListInfoWrap {
+  padding-top: 2px;
+  font-size: 0;
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-overflow: ellipsis;
+}
+
+.postListInfoWrap .time {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  font-weight: 400;
+  color: #999;
+}
+
+.postMain {
+  position: relative;
+  display: block;
+}
+
+.postBody {
+  padding: 0 22px 17px;
+}
+
+.postText {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.postText .txtBody {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  font-size: 14px;
+  line-height: 1.43;
+  white-space: pre-wrap;
+}
+
+.postCount {
+  overflow: hidden;
+  padding: 15px 22px 10px;
+  margin-top: -17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.postCountLeft {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.faceComment {
+  font-size: 13px;
+  font-weight: 400;
+  color: #555;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.uEmotionView {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0;
+  margin-right: 7px;
+}
+
+.emotionWrap {
+  margin-right: 0;
+  flex: 0 0 auto;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+}
+
+.emotionWrap .icon {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.uFaceIcon {
+  display: inline-block;
+  overflow: hidden;
+  width: 22px;
+  height: 22px;
+  text-indent: -999px;
+  background: url(https://ssl.pstatic.net/cmstatic/webclient/dres/20240528100621/images/emotion_apng/ico-emo-light-34-1.png) no-repeat;
+  background-size: 22px 22px !important;
+}
+
+.postCount .count { 
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 13px;
+  line-height: 1.333;
+  vertical-align: top;
+  font-weight: 400;
+  color: #555;
+}
+
+.comment {
+  font-size: 13px;
+  font-weight: 400;
+  color: #555;
+  min-height: 20px;
+  display: inline-block;
+  line-height: 1.333;
+  vertical-align: top;
+}
+
+.postAdded {
+  margin: 13px 0 0;
+  padding: 0;
+  border-radius: 0;
+  margin-top: 0 !important;
+  position: relative;
+  margin-top: 13px;
+  border-top: 1px solid #e7e7e7;
+  white-space: nowrap;
+  font-size: 0;
+  background: #fcfcfc;
+}
+
+.postAddBox {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.addCol {
+  display: table-cell;
+  position: relative;
+}
+
+.addStatus {
+  display: block;
+  width: 100%;
+  font-size: 0;
+  position: relative;
+  height: 44px;
+  line-height: 46px;
+  color: #222;
+  text-align: center;
+}
+
+.addStatus span {
+  font-size: 13px;
+}
+
+.addStatus .uFaceIcon {
+  position: relative;
+  top: 14px;
+  vertical-align: top;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px !important;
+}
+
+.addStatus .uIconComment{
+  display: inline-block;
+  margin: -10px 5px 0 0;
+  width: 20px;
+  height: 20px;
+  -webkit-mask-size: 20px 20px;
+  mask-size: 20px 20px;
+  vertical-align: middle;
+  mask-image: url(https://ssl.pstatic.net/cmstatic/webclient/dres/20240528100621/images/spr_svg.svg#normal_comment);
+  background-color: #888;
+}
+
+.postFunction {
+  position: absolute;
+  z-index: 20;
+  font-size: 0;
+  text-align: right;
+}
+
+.contentsCard .postFunction {
+  right: 0;
+  top: 30px;
+}
+
+.postSet {
+  margin-right: 14px;
+  position: relative;
+  opacity: .7;
+  display: inline-block;
+  vertical-align: top;
+  width: 20px;
+  height: 20px;
+  z-index: 12;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.postSet::before {
+  width: 20px;
+  height: 20px;
+  mask-image: url(https://ssl.pstatic.net/cmstatic/webclient/dres/20240528100621/images/spr_svg.svg#normal_option);
+  mask-size: 20px 20px;
+  background-color: #a8a8a8;
+  display: inline-block;
+  content: '';
+}
+
 /* 채팅방 목록 */
 
 #banner {
@@ -769,6 +1093,274 @@ body {
   font-size: 12px;
   font-weight: 400;
   color: #555;
+}
+
+/* 사진 목록 */
+
+.photoList {
+  position: relative;
+  margin-bottom: 13px;
+  background-color: #fff;
+  box-shadow: 0 1.4px 1.3px 0 rgba(62, 73, 89, .07);
+}
+
+#banner .photo .body {
+  padding: 14px;
+}
+
+.photo .body .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 3px;
+}
+
+.list a {
+  display: inline-block;
+  vertical-align: top;
+  width: 72px;
+  height: 72px;
+  position: relative;
+  overflow: hidden;
+}
+
+.list a img {
+  display: inline-block;
+}
+
+.list a::after {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 1px solid rgba(0, 0, 0, .05);
+  content: '';
+}
+
+.list a:hover::after, .list a:focus::after {
+  background: rgba(0,0,0,.1)
+}
+
+.photo .noImg {
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  background: #f5f6f8;
+}
+
+#banner .more {
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+  position: absolute;
+  top: 10px;
+  right: 14px;
+}
+
+/* 댓글 */
+
+.commentList {
+  position: relative;
+  text-align: left;
+  font-size: 0;
+}
+
+.cComment {
+  position: relative;
+  background: #fcfcfc;
+}
+
+.cComment .itemWrap {
+  position: relative;
+  min-height: 67px;
+  padding: 14px 40px 14px 66px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.cComment .writeInfo {
+  display: flex;
+}
+
+.cComment .writeInfo > .uProfile {
+  position: absolute;
+  left: 22px;
+  top: 15px;
+}
+
+.cComment .profileInner {
+  width: 34px;
+  height: 34px;
+}
+
+.cComment .profileInner::before {
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  display: block;
+  background-repeat: no-repeat;
+  content: '';
+  background-image: url(https://ssl.pstatic.net/cmstatic/webclient/dres/20240528100621/images/spr_icons.png);
+  background-position: -739px -451px;
+  margin: -8px 0 0 -8px;
+}
+
+.nameWrap {
+  flex: 1 1 auto;
+  font-size: 0;
+  display: flex;
+  max-width: 100%;
+  text-align: left;
+}
+
+.nameWrap .name {
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  line-height: 1.43;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  flex: 0 0 auto;
+  max-width: 90%;
+  padding-right: 3px;
+  font-weight: 600;
+  color: #444;
+}
+
+.commentBody .txt {
+  padding-top: 1px;
+  white-space: pre-wrap;
+  color: #222;
+  font-size: 13px;
+  line-height: 1.4;
+  cursor: pointer;
+  overflow-wrap: break-word;
+}
+
+.func {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-size: 0;
+  margin-top: 5px;
+}
+
+.cComment .time {
+  font-size: 12px;
+  font-weight: 400;
+  color: #999;
+  position: relative;
+  display: inline-block;
+  line-height: 15px;
+  vertical-align: top;
+}
+
+.cCommentWrite {
+  position: relative;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.cCommentWrite .writeMain {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  min-height: 35px;
+  padding: 12px 0;
+  background-color: #fff;
+}
+
+.cCommentWrite .writeMain > * {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.writeBtn {
+  font-size: 0;
+  align-items: flex-start;
+}
+
+.btnUploadWrap {
+  position: relative;
+  display: inline-block;
+  z-index: 2800;
+}
+
+.btnUpload {
+  padding: 0 10px 0 11px;
+  position: relative;
+  width: 43px;
+  height: 35px;
+}
+
+.uIconCommentPlus {
+  display: inline-block;
+  vertical-align: top;
+  width: 24px;
+  height: 24px;
+  mask-size: 24px 24px;
+  background-color: #999;
+  mask-image: url(https://ssl.pstatic.net/cmstatic/webclient/dres/20240528100621/images/spr_svg.svg#bar_plus);
+}
+
+.cCommentWrite .writeWrap {
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.cCommentWrite .writeWrap .flexbox {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.cCommentWrite .writeWrap .flexbox > * {
+  display: block;
+}
+
+.cCommentWrite .profileStatus {
+  position: relative;
+  z-index: 2800;
+  font-size: 0;
+  margin-top: 6px;
+  margin-left: 8px;
+}
+
+.cCommentWrite .profileStatus .current {
+  display: inline-block;
+  font-size: 0;
+}
+
+.cCommentWrite .profileStatus .uProfile .profileInner {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+}
+
+.cCommentWrite .profileStatus .uProfile .profileInner::before {
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+  display: block;
+  background-repeat: no-repeat;
+  content: '';
+  background-image: url(https://ssl.pstatic.net/cmstatic/webclient/dres/20240528100621/images/spr_icons.png);
+  background-position: -771px -203px;
+  margin: -6px 0 0 -5px;
+}
+
+.cCommentWrite .profileStatus img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 /* 테마 색상 */
