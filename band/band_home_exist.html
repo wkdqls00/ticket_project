@@ -11,7 +11,7 @@
 <body>
   <div id="wrap">
     <!-- 최상단 헤더 -->
-    <header class="header_area">
+    <header class="header_area bg_blue">
       <div class="headerInner">
         <!-- 로고, 검색창 영역 -->
         <div class="logo_search_area">
@@ -36,12 +36,12 @@
           <ul class="widgetList">
             <li>
               <button class="btnIconStyle">
-                <span class="uIconNews"></span>
+                <span class="uIconNews bg_white"></span>
               </button>
             </li>
             <li class="ml_14">
               <button class="btnIconStyle">
-                <span class="uIconChat"></span>
+                <span class="uIconChat bg_white"></span>
               </button>
             </li>
             <li class="ml_24 positionR">
@@ -285,12 +285,28 @@
                             </div>
                             <div class="writeWrap">
                               <div class="flexBox">
-                                <div class="messageInputProfileView">
-                                  <span class="current uProfile">
-                                    <span class="profileInner">
-                                      <img>
+                                <div class="profileStatus profileInputRegion">
+                                  <div class="messageInputProfileView">
+                                    <span class="current uProfile">
+                                      <span class="profileInner">
+                                        <img>
+                                      </span>
                                     </span>
-                                  </span>
+                                  </div>
+                                </div>
+                                <div class="mentionsWrap">
+                                  <div class="uInputComment">
+                                    <div class="mentions-input">
+                                      <div class="mentions">
+                                        <div></div>
+                                      </div>
+                                      <textarea cols="20" rows="1" class="commentWrite" placeholder="댓글을 남겨주세요."></textarea>
+                                      <div style="position: absolute; display: none; overflow-wrap: break-word; 
+                                      white-space: pre-wrap; border-color: rgb(68, 68, 68);
+                                      border-style: none; border-width: 0px; font-weight: 400; width: 333px;
+                                      line-height: 20.02px; font-size: 13px; padding: 8px 15px 0px 10px;">&nbsp;</div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
