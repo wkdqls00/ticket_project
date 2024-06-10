@@ -73,6 +73,10 @@ fieldset {
   background-color: transparent;
 }
 
+textarea {
+  resize: none;
+}
+
 button, select {
   cursor: pointer;
   text-transform: none;
