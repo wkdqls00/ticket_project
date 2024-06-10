@@ -7,6 +7,7 @@
   <link rel='stylesheet' type='text/css' media='screen' href='/assets/css/band.css'>
   <link rel='stylesheet' type='text/css' media='screen' href='/assets/css/band_header.css'>
   <title>BAND - 내부</title>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
   <div id="wrap">
@@ -226,6 +227,60 @@
         </div>
       </div>
     </div>
+    <!-- 팝업 : 글쓰기 -->
+    <div class="layerContainerView" tabindex="-1" id="postWriteEditor_popUp">
+      <div class="layerContainerInnerView">
+        <div class="postEditorLayerView" style="position: relative;">
+          <section class="lyWrap">
+            <div class="lyPostShareWrite" style="margin-top: 77px;">
+              <header class="header">
+                <h1 class="title">글쓰기</h1>
+              </header>
+              <div class="main">
+                <div class="postWrite">
+                  <div class="postWriteForm">
+                    <div class="contentEditor cke_editable">
+                      <p></p>
+                    </div>
+                  </div>
+                  <div class="buttonArea">
+                    <ul class="toolbarList">
+                      <li class="toolbarListItem">
+                        <label class="photo">
+                          <input type="file">
+                          <svg class="svgIcon">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ico-p-photo"></use>
+                          </svg>
+                        </label>
+                      </li>
+                    </ul>
+                    <div class="writeSubmitBox">
+                      <div class="buttonSubmit">
+                        <button type="submit" class="uButton">게시</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <footer class="footer">
+                <button class="btnLyClose"></button>
+              </footer>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- JavaScript -->
+  <script>
+    $(function() {
+      $(".postWriteEventWrapper").click(function() {
+        $(".layerContainerView").css('display', 'block');
+      })
+      $(".btnLyClose").click(function() {
+        $(".layerContainerView").css('display', 'none');
+      })
+    });
+  </script>
 </body>
 </html>

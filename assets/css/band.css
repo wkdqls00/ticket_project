@@ -1809,6 +1809,10 @@ body {
 
 /* 밴드 : 글쓰기 팝업 */
 
+.layerContainerView {
+  display: none;
+}
+
 .lyWrap {
   z-index: 30000;
   position: fixed;
