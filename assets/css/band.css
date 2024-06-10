@@ -1807,6 +1807,186 @@ body {
   background-position: -711px -732px;
 }
 
+/* 밴드 : 글쓰기 팝업 */
+
+.lyWrap {
+  z-index: 30000;
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  background: rgba(0, 0, 0, .75);
+  overflow: auto;
+}
+
+.lyPostShareWrite {
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .34), 0 10px 10px 0 rgba(0, 0, 0, .06);
+  align-self: flex-start;
+}
+
+.lyPostShareWrite header {
+  display: flex;
+  height: 59px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.lyPostShareWrite header .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+.lyPostShareWrite .main {
+  border-top: 1px solid #ebebeb;
+  padding: 0 20px;
+}
+
+.lyPostShareWrite .postWrite {
+  padding-bottom: 140px;
+  border: 0;
+  border-radius: 0;
+  position: relative;
+}
+
+.lyPostShareWrite .postWrite .postWriteForm {
+  max-height: 342px;
+  padding: 16px 0 0;
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.lyPostShareWrite .postWrite .postWriteForm .contentEditor {
+  position: relative;
+  padding: 13px 20px;
+  font-size: 14px;
+  letter-spacing: 0;
+  min-height: 246px;
+  border-radius: 2px;
+  color: #999;
+  line-height: 1.5;
+  outline: 0;
+  background: #fff;
+}
+
+.cke_editable {
+  cursor: text;
+}
+
+.postWrite .postWriteForm .contentEditor p {
+  color: #333;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.postWrite .postWriteForm .contentEditor p:last-child {
+  margin-bottom: 0;
+}
+
+.postWrite .postWriteForm .contentEditor p:first-child {
+  margin-top: 0;
+}
+
+.lyPostShareWrite .postWrite .buttonArea {
+  height: auto;
+  padding: 0;
+  z-index: 200;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+}
+
+.lyPostShareWrite .postWrite .toolbarList {
+  display: flex;
+}
+
+.lyPostShareWrite .postWrite .toolbarList,
+.lyPostShareWrite .postWrite .buttonArea>ul {
+  padding: 20px 2px 20px 3px;
+}
+
+.lyPostShareWrite .postWrite .toolbarList .toolbarListItem {
+  flex: 0 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: 0 4px;
+}
+
+.postWrite .buttonArea .toolbarList .toolbarListItem label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.postWrite .buttonArea .toolbarList .toolbarListItem input {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  cursor: pointer;
+  opacity: 0 !important;
+}
+
+.svgIcon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  color: #888;
+}
+
+.writeSubmitBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 61px;
+  padding: 0 20px 0 30px;
+  margin: 0 -20px;
+  border-top: 1px solid #ebebeb;
+}
+
+.writeSubmitBox .buttonSubmit {
+  flex: 0 0 auto;
+}
+
+.writeSubmitBox .buttonSubmit .uButton {
+  font-size: 14px;
+  font-weight: 400;
+  min-width: 90px;
+  height: 34px;
+  margin-left: 2px;
+  border-radius: 6px;
+  line-height: 34px;
+}
+
+.btnLyClose {
+  mask-image: url(https://ssl.pstatic.net/cmstatic/webclient/dres/20240603162344/images/spr_svg.svg#normal_close);
+  background-color: #666;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 17px;
+  height: 17px;
+  mask-size: 17px 17px;
+}
+
 /* 테마 색상 */
 
 .bg_blue {
