@@ -1560,8 +1560,259 @@ body {
   vertical-align: middle;
 }
 
+/* 멤버 목록 : 검색 */
+
+.memberSection {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 1.4px 1.3px 0 rgba(62, 73, 89, 0.1);
+}
+
+.mHeaderWrap {
+  position: relative;
+  padding: 0 22px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.mHeaderWrap .header {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  position: relative;
+  display: flex;
+  height: 61px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mHeaderWrap .header .title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+.mHeaderWrap .header .count {
+  margin-left: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.uInputSearch>:not(.border) {
+  z-index: 3;
+}
+
+.uInputSearch {
+  display: block;
+  margin: 0 0 22px;
+  height: 40px;
+  padding: 0 45px 0 15px;
+  position: relative;
+  width: 100%;
+  background: #fcfcfc;
+}
+
+.uInputSearch input::placeholder {
+  color: #999
+}
+
+.uInputSearch::after {
+  z-index: 1 !important;
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 1px solid #ebebeb;
+}
+
+.uInputSearch input {
+  font-size: 14px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  background: 0 0;
+}
+
+.uInputSearch .search {
+  position: absolute;
+  right: 22px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  opacity: .75;
+}
+
+.uInputSearch .search::before {
+  width: 20px;
+  height: 20px;
+  mask-image: url(https://ssl.pstatic.net/cmstatic/webclient/dres/20240603162344/images/spr_svg.svg#normal_search);
+  mask-size: 20px 20px;
+  background-color: #999;
+  display: block;
+  content: '';
+}
+
+.uInputSearch input~.border {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 1px solid #ebebeb;
+}
+
+/* 멤버 목록 : 내용 */
+
+.memberWrap {
+  padding: 0 22px 10px;
+}
+
+.subTitle {
+  display: flex;
+  margin: 17px 0 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subTitle .title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+
+.uSelect {
+  display: block;
+  direction: rtl;
+  border: 0;
+  background: 0 0;
+  height: 20px !important;
+  position: relative;
+  vertical-align: top;
+}
+
+.selectName {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  background: 0 0;
+  text-align: left;
+  appearance: none;
+  vertical-align: top;
+  font-size: 13px;
+  font-weight: 400;
+  color: #666;
+}
+
+.uFlexItem:first-child {
+  border-top-width: 0;
+}
+
+.uFlexItem {
+  display: flex;
+  align-items: center;
+  min-height: 88px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding: 15px 0;
+}
+
+.uFlexItem .uProfile {
+  display: block;
+  margin-right: 12px;
+}
+
+.uFlexItem .uProfile .profileInner {
+  width: 50px;
+  height: 50px;
+}
+
+.uFlexItem .uProfile .profileInner::before {
+  width: 25px;
+  height: 25px;
+  background-position: -689px -191px;
+  margin: -12px 0 0 -12px;
+}
+
+.uFlexItem .body {
+  flex: 1 1;
+  min-width: 0;
+  line-height: 1.4;
+  display: block;
+}
+
+.uFlexItem .body .text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  margin-top: 3px;
+}
+
+.memberList .body .-flex:first-child {
+  margin-top: 0;
+}
+
+.memberList .body .-flex {
+  display: inline-flex;
+  margin-top: 7px;
+  max-width: 100%;
+  align-items: center;
+}
+
+.memberList .body .-flex .ellipsis {
+  display: inline-block;
+  vertical-align: top;
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-overflow: ellipsis;
+}
+
+.uFlexItem .body .leader {
+  background: #2ecc71;
+  display: block;
+  padding: 0 6px;
+  height: 17px;
+  line-height: 18px;
+  border-radius: 17px;
+  vertical-align: top;
+  white-space: nowrap;
+  margin-left: 5px;
+  font-size: 10px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.uFlexItem .body .leader::before {
+  position: relative;
+  top: 2px;
+  margin-right: 2px;
+  width: 11px;
+  height: 11px;
+  overflow: hidden;
+  display: inline-block;
+  background-repeat: no-repeat;
+  content: '';
+  background-image: url(https://ssl.pstatic.net/cmstatic/webclient/dres/20240603162344/images/spr_icons.png);
+  background-position: -711px -732px;
+}
+
 /* 테마 색상 */
 
 .bg_blue {
   background-color: #1ba7e9 !important;
+}
+
+.sf_blue {
+  color: #1ba7e9 !important;
 }
