@@ -2,10 +2,10 @@
 
 
 /* common */
-.inner {max-width:1120px; margin:0 auto;}
+.inner {width:1120px; margin:0 auto;}
 img {width:100%; display: block;}
+/* 메인페이지 */
 /* header */
-/* header {background-color: antiquewhite;} */
 header .utill {height: 40px;background-color: #f8f9fa;}
 header .utill ul {float: right;}
 header .utill ul .utill_link{float: left;display: inline-block; position: relative; padding: 0 6px;font-size: 0;}
@@ -27,8 +27,15 @@ header .utill ul .utill_link a {display: block;padding: 10px 6px 9px;font-size: 
 .main_swiper_box {max-width:1920px;height:560px;text-align: center;}
 
 /* 티켓오픈 */
-.con_box{margin: 0 auto; width: 1120px;}
+.con_box{margin-top:110px;}
 .con_header {margin-top: 80px; display: flex;justify-content: space-between;}
+.con_header a{padding-top: 10px;}
 .con_tit{font-size: 32px; line-height: 32px;letter-spacing: -0.05em;}
-.item_list{display: flex;flex-wrap: wrap;}
-.card_item{margin: 50px 30px 0 0; width: 200px;}
+.item_box{}
+.item_list{display: flex;flex-wrap: wrap;margin:-20px -30px 0 0;}
+.item_list .card_item{margin: 50px 30px 0 0; width: 200px;}
+.card_item .img_box {width:200px;height:247px;border-radius: 10px;overflow: hidden;}
+.card_item .img_box img:hover{transform: scale(1.1);transition: transform .2s cubic-bezier(0.165, 0.84, 0.44, 1);}
+.txt_box {margin-top: 16px;font-size: 14px;line-height: 22px;}
+.txt_box .item_tit {display: block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;max-height: 52px;font-size: 18px;line-height: 26px;color: #242428;}
+.txt_box .item_date{margin-top: 6px;color: #fa2828;}
