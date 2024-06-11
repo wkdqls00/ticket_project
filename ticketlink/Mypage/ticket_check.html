@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/assets/css/mypage.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/ticket_check.css">
+    <title>예매확인</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="wrap">
+        <header class="common_header">
+            <div class="header_util"></div>
+            <div class="header_inner"></div>
+            <div class="header_gnb"></div>
+        </header>
+        <div class="content">
+            <div class="container">
+                <div class="quick_menu"> <!--상단 메뉴들-->
+                    <div class="title">
+                        <h2 class="title_txt">마이페이지</h2>
+                    </div>
+                    <ul class="quick_menu_list">
+                        <li class="quick_menu_item point">
+                            <span class="qmenu_tit">
+                                포인트
+                            </span>
+                        </li>
+                        <li class="quick_menu_item">
+                            <span class="qmenu_tit">
+                                나의 예매권
+                            </span>
+                        </li>
+                        <li class="quick_menu_item">
+                            <span class="qmenu_tit">
+                                나의 쿠폰
+                            </span>
+                        </li>
+                        <li class="quick_menu_item">
+                            <span class="qmenu_tit">
+                                나의 회원정보
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="help_cont"> <!--마이페이지 밑으로 내용-->
+                    <ul class="helpMenu"> <!--왼쪽메뉴-->
+                        <li class="has_sub">
+                            <span class="help_submenu_tit">예매관리</span>
+                            <ul class="help_submenu">
+                                <li class="on"><a href="http://127.0.0.1:5500/TicketProject/Mypage/ticket_check.html">예매확인/취소</a></li>
+                                <li><a href="">김종원</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub">
+                            <span class="help_submenu_tit">할인혜택</span>
+                            <ul class="help_submenu">
+                                <li><a href="">포인트</a></li>
+                                <li><a href="">예매권</a></li>
+                                <li><a href="">상품권</a></li>
+                                <li><a href="">쿠폰</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub">
+                            <span class="help_submenu_tit">활동관리</span>
+                            <ul class="help_submenu">
+                                <li><a href="">참여 이벤트</a></li>
+                                <li><a href="">후기관리</a></li>
+                                <li><a href="">팬클럽/멤버십 내역</a></li>
+                                <li><a href="">취소표 대기 신청 내역</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub">
+                            <span class="help_submenu_tit">증빙서류</span>
+                            <ul class="help_submenu">
+                                <li><a href="">입금증</a></li>
+                                <li><a href="">현금영수증</a></li>
+                                <li><a href="">신용카드 매출 전표</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub">
+                            <span class="help_submenu_tit">회원정보관리</span>
+                            <ul class="help_submenu">
+                                <li><a href="">환불계좌관리</a></li>
+                                <li><a href="http://127.0.0.1:5500/TicketProject/Mypage/mypage.html">회원정보수정</a></li>
+                                <li><a target="_blank" href="http://127.0.0.1:5500/TicketProject/Modify/modify_main.html">회원탈퇴</a></li>
+                            </ul>
+                        </li>
+                    </ul>  <!--왼쪽메뉴-->
+                    <div class="help_recont"> <!--안쪽 내용들-->
+                        <div class="h3">
+                            <h4 class="h4">예매확인/취소</h4> 
+                        </div>
+                        <p class="guide_txt">
+                            <span style="color: #fa2828;">예매번호</span>를 클릭하면 예매 상세 내용을 확인할 수 있습니다.
+                            <br>공연/전시 예매 내역은 하단의 공연/전시 탭을 선택하면 확인할 수 있습니다.
+                        </p>
+                        <ul class="mypage_tab">
+                            <li class="on"><a href="http://127.0.0.1:5500/TicketProject/Mypage/ticket_check.html">예매확인</a></li>
+                            <li><a href="http://127.0.0.1:5500/TicketProject/Mypage/ticket_cancle.html">예매취소</a></li>
+                        </ul>
+                        <div class="sortbox">
+                            <dl class="daytbox fl">
+                                <dt>기간별 조회</dt>
+                                <dd style="float: left">
+                                    <ul class="daysort">
+                                        <li><a href="">15일</a></li>
+                                        <li><a href="">1개월</a></li>
+                                        <li><a href="">2개월</a></li>
+                                        <li><a href="">3개월</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl class="monthbox fr">
+                                <dt>월 별 조회</dt>
+                                <dd style="float: left;">
+                                    <div class="selectbox"><a href="" class="select ng-binding">예매일</a></div>
+                                    <div class="selectbox"><a href="" class="select ng-binding">연도</a></div>
+                                    <div class="selectbox"><a href="" class="select ng-binding">월</a></div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <p class="guide_txt v2">
+                            예매한 내역이 확인이 안되실 경우
+                            <a href="">1:1 상담문의</a>
+                            를 이용해주세요.
+                        </p>
+                        <div class="basic_tbl">
+                            <table>
+                                <colgroup>
+                                    <col style="width:90px">
+                                    <col>
+                                    <col style="width:135px">
+                                    <col style="width:50px">
+                                    <col style="width:100px">
+                                    <col style="width:155px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">예매번호</th>
+                                        <th scope="col">티켓명</th>
+                                        <th scope="col">관람일시</th>
+                                        <th scope="col">매수</th>
+                                        <th scope="col">취소가능일</th>
+                                        <th scope="col">상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fs12 point_number"><a href="">123</a></td>
+                                        <td class="tl ng-scope"><a href="">집에 가고 싶다</a></td>
+                                        <td class="fs12 number ng-binding">1949.04.15</td>
+                                        <td class="ng-binding">1장</td>
+                                        <td class="fs12 number color_point">1949.04.15 16:00</td>
+                                        <td>
+                                            <div class="reserve_condition1">전체취소</div>
+                                            <div class="reserve_condition2">1949.04.15</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="paging">
+                            <a href="" class="first">맨앞</a>
+                            <a href="" class="prev">이전</a>
+                            <strong>1</strong>
+                            <a href="" class="next">다음</a>
+                            <a href="" class="end">맨뒤</a>
+                        </div>
+                        <div class="note">
+                            <h6>
+                                <span></span>
+                                티켓취소 안내
+                            </h6>
+                            <ol>
+                                <li>예매한 티켓 전체 취소, 혹은 신용카드 결제 시 부분 취소가 가능합니다.<br>단, 일부 상품의 경우도 부분취소가 불가합니다.</li>
+                                <li>티켓이 배송된 이후에는 인터넷이나 고객센터를 통한 취소가 불가하며, 받으신 티켓을 취소일 전까지 <span style="color: #ef3e4e;">종원링크 주식회사</span> 본사로 반송을 해주셔야 취소 가능합니다. (등기우편을 이용해주세요!)</li>
+                                <li>예매 당일 자정까지 취소하실 경우는 예매수수료도 환불되며, 취소수수료가 부과되지 않습니다. 그 이후에 취소하실 경우는 예매수수료가 환불되지 않으며, 취소수수료는 정책에 따라 부과됩니다.</li>
+                                <li>일부 경기의 경우 상황에 따라 일괄 취소 건이 발생할 수있으며, 일괄 취소 시에는 취소 수수료가 부과되지 않습니다.</li>
+                                <li>티켓의 날짜/시간/좌석 등급/좌석 위치 변경은 불가합니다. 자세한 안내가 필요할 경우 고객센터를 이용해주세요.</li>
+                            </ol>
+                        </div>
+                    </div> <!--안쪽 내용들-->
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer_menu">
+                <ul class="footer_menu_list">
+                    <li class="footer_menu_item">
+                        <a href="" class="footer_menu_link">회사소개</a>
+                    </li>
+                    <li class="footer_menu_item">
+                        <a href="" class="footer_menu_link">개인정보 처리방침</a>
+                    </li>
+                    <li class="footer_menu_item">
+                        <a href="" class="footer_menu_link">청소년 보호정책</a>
+                    </li>
+                    <li class="footer_menu_item">
+                        <a href="" class="footer_menu_link">이용약관</a>
+                    </li>
+                    <li class="footer_menu_item">
+                        <a href="" class="footer_menu_link">고객센터</a>
+                    </li>
+                    <li class="footer_menu_item">
+                        <a href="" class="footer_menu_link">티켓판매안내</a>
+                    </li>
+                    <li class="footer_menu_item">
+                        <a href="" class="footer_menu_link">광고안내</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_inner">
+                <span style="font-weight: 700;">종원링크 주식회사</span>
+                <address class="footer_address">
+                    <p>
+                        <span class="footer_address_item">목동 하이페리온</span>
+                        <span class="footer_address_item">대표이사:김종원</span>
+                        <span class="footer_address_item">사업자등록번호:22-72007275</span>
+                    </p>
+                    <p>
+                        <span class="footer_address_item">010-9528-7136</span>
+                        <span class="footer_address_item">jongwon@naver.com</span>
+                        <span class="footer_address_item">통신판매업 신고번호:종원이집</span>
+                        <span class="footer_address_item"><a href="" style="color: #242428; font-weight: bold;">사업자정보확인</a></span>
+                        <span class="footer_address_item">개인정보보호 책임자:김종원</span>
+                    </p>
+                </address>
+            </div>
+        </div>
+    </div>   
+</body>
+</html>
