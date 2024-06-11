@@ -13,7 +13,7 @@
 <body class="skin3">
   <div class="ChatMainLayoutView">
     <div id="wrap" class="sChatPop">
-      <header class="chatHeader sf_bg">
+      <header class="chatHeader sf_bg bg_blue">
         <div class="chatHeaderInfoBox">
           <h1 class="chatTitle">치이카와, 장예원 (2)</h1>
           <h2 class="chatSubTitle">6조 밴드</h2>
@@ -25,14 +25,46 @@
           <div class="messageListRegion">
             <div class="chattingRoomMessageListView">
               <div>
-                <div class="logWrap">
+                <div class="logWrap logEvent">
                   <time class="time">2024년 6월 10일 월요일</time>
                 </div>
                 <div class="childViewContainer">
-                  <div class="logMy">
+                  <!-- 본인 채팅 -->
+                  <div class="logWrap logMy">
                     <div class="msg msgContainer">
                       <div class="msgMain">
-                        <div class="messageBodyWrap"></div>
+                        <div class="messageBodyWrap">
+                          <span class="txt">안녕하세요</span>
+                        </div>
+                        <div class="aside">
+                          <div class="msgAside">
+                            <span class="time">오후 2:20</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 상대 채팅 -->
+                  <div class="logWrap logFriend">
+                    <a href="#" class="uProfile">
+                      <span class="profileInner"></span>
+                    </a>
+                    <span class="pfName">
+                      <button class="author">
+                        치이카와
+                      </button>
+                    </span>
+                    <div class="msg">
+                      <div class="msgMain">
+                        <div class="messageBodyWrap">
+                          <span class="txt">ㅎㅇ</span>
+                        </div>
+                        <div class="aside">
+                          <div class="msgAside">
+                            <div class="read">1 읽음</div>
+                            <div class="time">오후 4:27</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -42,6 +74,32 @@
           </div>
         </div>
       </div>
+      <!-- 메시지 입력창 -->
+      <section class="commentWrite">
+        <!-- <div class="buttonArea">
+          <ul class="chatInputList">
+            <li class="chatInputItem">
+              <label class="btnChatInput">
+                <input type="file">
+                <svg class="svgIcon" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ico-chat-photo"></use>
+                </svg>
+              </label>
+            </li>
+          </ul>
+        </div> -->
+        <div class="mentionsWrap">
+          <div class="mentions-input">
+            <div class="mentions">
+              <div></div>
+            </div>
+            <textarea cols="20" rows="2" class="commentWrite" placeholder="보낼 메시지를 입력하세요." maxlength="10000"></textarea>
+          </div>
+          <div class="submitWrap">
+            <button type="submit" class="uButton writeSubmit">보내기</button>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </body>
