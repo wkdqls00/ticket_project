@@ -10,10 +10,17 @@
   margin-top: 10px !important;
 }
 
+/* width */
+.-w400 {
+  width: 400px !important;
+}
+
+/* position */
 .positionR {
   position: relative;
 }
 
+/* reset */
 body, html {
   height: 100%;
   min-height: 100%;
@@ -1655,7 +1662,8 @@ body {
   content: '';
 }
 
-.uInputSearch input~.border {
+.uInputSearch input~.border,
+.uInput input {
   z-index: 2;
   display: block;
   position: absolute;
@@ -1808,11 +1816,6 @@ body {
 }
 
 /* 밴드 : 글쓰기 팝업 */
-
-.layerContainerView {
-  display: none;
-}
-
 .lyWrap {
   z-index: 30000;
   position: fixed;
@@ -1997,7 +2000,7 @@ body {
   background: #fff;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, .34), 0 10px 10px 0 rgba(0, 0, 0, .06);
   align-self: flex-start;
-  width: 380px !important;
+  width: 380px;
 }
 
 .lyWrap .modalHeader {
@@ -2464,6 +2467,168 @@ body {
   vertical-align: top;
   white-space: nowrap;
   cursor: pointer;
+}
+
+/* 팝업 : 새 채팅 */
+
+.lyContent > .main.-tSpaceNone {
+  padding-top: 0;
+}
+
+.uInput::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 1px solid #ebebeb;
+  z-index: 1 !important;
+  content: '';
+}
+
+.uInput input~.border {
+  border: 1px solid #ebebeb;
+}
+
+.lyWrap .lyContent > .header {
+  padding: 0 30px;
+  border-bottom: 1px solid #d9d9d9;
+  text-align: center;
+}
+
+.lyWrap .lyContent > .header::after {
+  clear: both;
+}
+
+.lyWrap .lyContent > .header::before,
+.lyWrap .lyContent > .header::after {
+  display: table;
+  content: ' ';
+}
+
+.lyContent > .main {
+  text-align: left;
+  padding: 0 20px;
+}
+
+.lyWrap .lyContent > .main .title {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  display: block;
+  margin-bottom: 3px !important;
+}
+
+.lyWrap .lyContent > .header > .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 11px 0;
+}
+
+.lyWrap .lyContent > .main .title.-sub2 {
+  font-size: 13px;
+  font-weight: 400;
+  color: #333;
+}
+
+.lyWrap .uInput {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: #fcfcfc;
+}
+
+.lyWrap .uInput input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  background: 0 0;
+  font-size: 13px;
+}
+
+.lyWrap .uInput::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 1px solid #ebebeb;
+}
+
+.uInput .border {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 1px solid #ebebeb;
+}
+
+.uInput>:not(.border) {
+  z-index: 3;
+}
+
+.lyWrap .lyContent > .footer {
+  margin: 0 20px;
+  padding: 20px 0 24px;
+  font-size: 0;
+  text-align: center;
+}
+
+.lyWrap .lyContent > .footer .uButton {
+  margin: 0 5px;
+}
+
+.uButton.-sizeL {
+  width: auto;
+  min-width: 109px;
+  height: 40px;
+  padding: 0 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.uButton.-confirm {
+  background: #444a61;
+}
+
+.uButton.-confirm:hover {
+  background: #383e4c
+}
+
+.uButton.-iconClose {
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  display: inline-block;
+  background-repeat: no-repeat;
+  text-indent: -999px;
+  background-image: url(https://ssl.pstatic.net/cmstatic/webclient/dres/20240611102104/images/spr_icons.png);
+  background-position: -739px -179px;
+}
+
+.uButton[class*=-icon] {
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: 0 0;
+  font-size: 0;
+}
+
+.lyWrap .lyContent > .footer .btnLyClose {
+  position: absolute;
+  right: 11px;
+  top: 15px;
 }
 
 /* 테마 색상 */
