@@ -1991,6 +1991,154 @@ body {
   mask-size: 17px 17px;
 }
 
+.lyContent {
+  position: relative;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .34), 0 10px 10px 0 rgba(0, 0, 0, .06);
+  align-self: flex-start;
+  width: 380px !important;
+}
+
+.lyWrap .modalHeader {
+  position: relative;
+  padding: 0 30px;
+  border-bottom: 1px solid #d9d9d9 !important;
+  text-align: center;
+}
+
+.lyWrap .modalHeader::before,
+.lyWrap .modalHeader::after {
+  display: table;
+  content: ' ';
+}
+
+.lyWrap .modalHeader::after {
+  clear: both;
+}
+
+.lyWrap .modalHeader .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+  padding: 12px 0 11px;
+}
+
+.lyWrap .modalHeader .title .titleDesc {
+  font-size: 12px;
+  color: #666;
+}
+
+.joinQnAArea {
+  padding: 0 20px;
+  margin-top: 12px;
+}
+
+.questionBox {
+  max-height: 262px;
+  overflow-y: auto;
+}
+
+.questionText {
+  line-height: 1.29;
+}
+
+.answerInputBox {
+  position: relative;
+  margin-top: 10px !important;
+}
+
+.answerInputWrap {
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  border: 1px solid #e6e6e6;
+  background-color: #fcfcfc;
+  max-height: 149px;
+  overflow-y: auto;
+  font-size: 0;
+}
+
+.answerInputWrap .mentions-input {
+  flex: 1 1 auto;
+  position: relative;
+  overflow: hidden;
+  max-height: 83px;
+  width: 100%;
+}
+
+.answerInputWrap .mentions-input .mentions,
+.answerInputWrap textarea {
+  height: 44px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden;
+  border: 0;
+  min-height: 48px;
+  line-height: 1.38;
+  font-size: 13px;
+  vertical-align: top;
+  text-align: left;
+  white-space: pre-wrap;
+  padding: 0;
+}
+
+.answerInputWrap textarea {
+  width: 100%;
+  height: 43px;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-right: 24px;
+  min-height: 100%;
+  background-color: transparent;
+  resize: none;
+}
+
+.lyWrap .modalFooter {
+  margin: 0 20px;
+  padding: 20px 0 25px;
+  font-size: 0;
+  text-align: center;
+}
+
+.modalFooter .uButton {
+  margin: 0 5px;
+  line-height: 2;
+  position: relative;
+  min-width: 90px;
+  height: 34px;
+  padding: 0 15px;
+  border-radius: 1px;
+  font-size: 13px;
+  font-weight: 500;
+  vertical-align: top;
+  white-space: nowrap;
+  cursor: pointer;
+  width: auto;
+}
+
+.uButton.-cancle {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #666;
+}
+
+.lyWrap .modalFooter .uButton {
+  margin: 0 5px;
+}
+
+.uButton.-confirm {
+  background: #444a61;
+}
+
 /* 가입 안 한 밴드 : 왼쪽 */
 
 .bandInfoBox {
