@@ -131,3 +131,12 @@ fieldset {
 input, textarea {
   border-radius: 0;
 }
+
+main {
+  display: block;
+}
+
+input {
+  color: #444;;
+  border-radius: 0;
+}
