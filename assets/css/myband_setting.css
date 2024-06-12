@@ -234,9 +234,9 @@
   white-space: nowrap;
   cursor: pointer;
 }
-.singo_btn {
+.delete_btn {
   border: solid 1px #e7e7e7;
-  color: #222;
+  color: #ff0f2d;
   background: #f5f6f8;
   min-width: 41px;
   height: 26px;
