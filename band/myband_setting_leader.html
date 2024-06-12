@@ -7,6 +7,9 @@
   <link rel='stylesheet' type='text/css' media='screen' href='/assets/css/band.css'>
   <link rel='stylesheet' type='text/css' media='screen' href='/assets/css/band_header.css'>
   <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/myband_setting.css">
+  <link rel='stylesheet' type='text/css' media='screen' href='/assets/css/band_leave_popup.css'>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
   <title>BAND - Setting - Leader</title>
 </head>
 <body>
@@ -293,5 +296,74 @@
       </div>
     </div>
   </div>
+  <!-- 밴드 삭제 : 팝업 -->
+  <div class="layer_wrap" id="bandDelete_popUp" style="display: none;">
+    <section class="lyWrap">
+      <div class="lyContent">
+        <header class="modalHeader">
+          <h1 class="title">밴드 삭제</h1>
+        </header>
+        <div class="modalBody">
+          <div class="modalContentWrap">
+            <p>
+              <span class="-pintColor"></span>
+            </p>
+            <div class="msgList">
+              <p class="pText2">
+                밴드를 삭제하시겠습니까?
+                <br>
+                삭제 후에는 복구가 불가능합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <fotter class="modalFooter">
+          <button type="button" class="btnCancel">아니오</button>
+          <button type="button" class="btnLeaveBand">예</button>
+        </fotter>
+      </div>
+    </section>
+  </div>
+  <!-- 밴드 탈퇴 : 팝업 -->
+  <div class="layer_wrap" id="bandLeave_popUp" style="display: none;">
+    <section class="lyWrap">
+      <div class="lyContent">
+        <header class="modalHeader">
+          <h1 class="title">밴드 탈퇴</h1>
+        </header>
+        <div class="modalBody">
+          <div class="modalContentWrap">
+            <p class="pText1">
+              <span class="-pointColor">밴드 탈퇴 전에 꼭 확인하세요</span>
+            </p>
+            <div class="msgList">
+              <p class="pText2">밴드를 탈퇴하시겠습니까?</p>
+            </div>
+          </div>
+        </div>
+        <fotter class="modalFooter">
+          <button type="button" class="btnCancel">취소</button>
+          <button type="button" class="btnLeaveBand">탈퇴하기</button>
+        </fotter>
+      </div>
+    </section>
+  </div>
+  <!-- JavaScript -->
+  <script>
+    $(function() {
+      $(".delete_btn").click(function() {
+        $("#bandDelete_popUp").css('display', 'block');
+      });
+      $(".band_leave_btn").click(function() {
+        $("#bandLeave_popUp").css('display', 'block');
+      });
+      $(".newChattingBtn").click(function() {
+        $("#newChatWrap_popUp").css('display', 'block');
+      });
+      $(".btnCancel").click(function() {
+        $(".layer_wrap").css('display', 'none');
+      })
+    });
+  </script>
 </body>
 </html>
