@@ -7,7 +7,8 @@
   <link rel='stylesheet' type='text/css' media='screen' href='/assets/css/band.css'>
   <link rel='stylesheet' type='text/css' media='screen' href='/assets/css/band_header.css'>
   <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/myband_setting.css">
-  <title>BAND - Setting - Leader</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/band_information.css">
+  <title>BAND - Information - Setting</title>
 </head>
 <body>
   <div id="wrap">
@@ -74,11 +75,6 @@
               <span class="menu_item_txt">멤버</span>
             </a>
           </li>
-          <li class="menu_item">
-            <a href="#">
-              <span class="menu_item_txt">채팅</span>
-            </a>
-          </li>
         </ul>
       </div>
       <!-- 메인 내용 왼쪽 밴드 소개 -->
@@ -115,7 +111,7 @@
             <p class="bandTypeDesc">
               밴드와 게시글이 공개되지 않습니다. 초대를 통해서만 가입할 수 있습니다.
             </p>
-            <!-- 밴드 설정 -->
+            <!-- 밴드 소개 -->
             <div class="bandSetting">
               <a href="#" class="bandSetting_Link">
                 <span class="uIconSetting"></span>
@@ -125,129 +121,41 @@
           </div>
         </div>
       </aside>
-      <!-- 내 밴드 설정 -->
-      <main class="band_main">
-        <section class="setting_band">
-          <div class="setting_header">
-            <header class="set_header">
-              <h1 class="title">밴드 설정</h1>
+      <!-- 밴드 가입 조건 설정 -->
+      <main class="main_content">
+        <div class="bandIntroView">
+          <div class="headerWrap">
+            <header class="contentHeader">
+              <h1 class="h1_title">밴드 소개</h1>
             </header>
           </div>
-          <div class="profile_view">
-            <a href="#" role="button" class="open_profile_btn">
-              <span class="profile_inner"></span>
-            </a>
-            <div class="set_body">
-              <span class="name">김민효님의 프로필</span>
-              <span class="subtxt"></span>
-            </div>
-            <div class="etc">
-              <button type="button" class="etc_btn">
-                설정
-              </button>
-            </div>
-          </div>
-          <h2 class="setting_title">밴드 정보 관리</h2>
-          <ul class="setting_list">
-            <li class="setting_item">
-              <div class="item_content">
-                <span class="label">밴드 이름 및 커버</span>
-                <span class="subtxt"></span>
-              </div>
-              <div class="item_side">
-                <a href="#" class="band_update_btn">변경</a>
-              </div>
-            </li>
-          </ul>
-          <ul class="setting_list">
-            <li class="setting_item">
-              <div class="item_content">
-                <span class="label">밴드 공개</span>
-                <span class="subtxt">비공개</span>
-              </div>
-              <div class="item_side">
-                <a href="#" class="band_update_btn">변경</a>
-              </div>
-            </li>
-          </ul>
-          <ul class="setting_list">
-            <li class="setting_item">
-              <div class="item_content">
-                <span class="label">가입 조건 설정</span>
-                <span class="subtxt">성별 제한없음, 나이 제한없음</span>
-              </div>
-              <div class="item_side">
-                <a href="#" class="band_update_btn">변경</a>
-              </div>
-            </li>
-          </ul>
-          <ul class="setting_list">
-            <li class="setting_item">
-              <div class="item_content">
-                <span class="label">밴드 소개</span>
-                <span class="subtxt">밴드 주소, 키워드, 소개글을 관리하세요.</span>
-              </div>
-              <div class="item_side">
-                <a href="#" class="band_update_btn">변경</a>
-              </div>
-            </li>
-          </ul>
-          <h2 class="setting_title">멤버 가입 관리</h2>
-          <ul class="setting_list">
-            <li class="setting_item">
-              <div class="item_content">
-                <span class="label">가입 신청 받기</span>
-                <span class="subtxt">멤버 가입시 리더의 승인이 필요합니다.</span>
-              </div>
-              <div class="item_side">
-                <label class="check_switch">
-                  <input type="checkbox" class="check_input" checked="checked">
-                  <span class="check_label">
-                    <span class="shape"></span>
-                  </span>
-                </label>
-              </div>
-            </li>
-            <li class="setting_item -minHeightAuto">
-              <div class="-flexible" style="min-height: auto; padding-top: 28px;">
-                <div class="item_content">
-                  <span class="label">가입 질문 하기</span>
-                </div>
-                <div class="item_side">
-                  <label class="check_switch -switch">
-                    <input type="checkbox" class="check_input" checked="checked">
-                  <span class="check_label">
-                    <span class="shape"></span>
-                  </span>
-                </label>
-              </div>
-              </div>
-              <div class="textareaBox">
-                <div class="uTextarea" style="height: 76px">
-                  <textArea class="_joinQuestionTextarea" id="qnaText" maxlength="100" placeholder="새로운 멤버가 밴드 가입을 신청할 때 물어볼 질문을 작성해 주세요."></textArea>
+            <div class="bandIntroWrapper">
+              <!-- 주제 선택 -->
+              <div class="_selectedKeyword"></div>
+              <!-- 소개글 입력 -->
+              <div class="textareaBox _introDescription">
+                <div class="uTextarea">
+                  <textarea class="_introDescription" id="bandIntroduce" cols="30" rows="10" maxlength="500" placeholder="밴드 소개말을 입력하세요." style="height: 100%"></textarea>
                   <span class="border"></span>
                 </div>
               </div>
-            </li>
-          </ul>
-          <h2 class="hide_title"></h2>
-          <ul class="setting_list">
-            <li class="setting_item">
-              <div class="item_content">
-                <span class="label">밴드 탈퇴</span>
+              <!-- 위치 등록 -->
+              <div class="_locationText" style="display:flex;">
+                <div class="introOptionBox">
+                  <div class="addressText">
+                    <button type="button" class="textButton">주소를 등록해주세요.
+                    </button>
+                  </div>
+                </div>
               </div>
-              <div class="item_side">
-                <button type="button" class="band_leave_btn">탈퇴하기</button>
+              <!-- 저장 버튼 -->
+              <div class="introOption">
+                <div class="introOptionBox2">
+                  <button type="button" class="btnConfirm">저장</button>
+                </div>
               </div>
-            </li>
-            <li class="setting_item">
-              <div class="item_content">밴드 삭제</div>
-              <div class="item_side">
-                <button type="button" class="delete_btn">삭제하기</button>
-              </div>
-            </li>
-          </ul>
-        </section>
+          </div>
+        </div>
       </main>
       <!-- 메인 내용 오른쪽 채팅방 목록 -->
       <div id="banner">
