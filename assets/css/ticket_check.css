@@ -69,6 +69,7 @@ ul, ol {
     line-height: 12px;
     color: #242428;
     font-weight: bold;
+    letter-spacing: -1px;
 }
 .daysort {
     display: inline-block;
@@ -90,13 +91,14 @@ ul, ol {
     line-height: 27px;
     font-weight: bold;
     box-sizing: border-box;
+    margin-left: -1px;
 }
 .selectbox {
     display: inline-block;
     margin-right: 1px;
     font-size: 12px;
-    vertical-align: middle;
     border-color: #e8eaf1;
+    position: relative;
 }
 .select {
     height: 28px;
@@ -111,7 +113,7 @@ ul, ol {
     font-weight: bold;
     color: #242428;
 }
-.selectbox .select::before {
+.selectbox .select::after {
     width: 16px;
     height: 16px;
     background-image: url(https://tketlink.dn.toastoven.net/markup_resources/2024042401_M/renewal/pcweb/img/old-svg.svg);
@@ -123,6 +125,19 @@ ul, ol {
     right: 5px;
     transform: translateY(-50%);
     content: " ";
+}
+.btn_blank {
+    display: inline-block;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 77px;
+    padding: 4px 11px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    border-color: #242428;
+    background-color: #fff;
+    line-height: 18px;
 }
 .guide_txt.v2 {
     font-size: 12px;
@@ -139,6 +154,7 @@ ul, ol {
 .basic_tbl table {
     position: relative;
     width: 100%;
+    border-collapse: collapse;
 }
 .basic_tbl table thead th {
     font-weight: 700;
@@ -149,6 +165,7 @@ ul, ol {
     line-height: 20px; 
     font-size: 14px;
     border-collapse: collapse;
+    letter-spacing: -1px;
 }
 .point_number {
     text-decoration: underline;
@@ -160,7 +177,7 @@ ul, ol {
     text-decoration: underline;
 }
 tbody tr:first-child td {
-    padding: 14px 4px;
+    padding: 14px 2px;
 }
 .basic_tbl table tbody td {
     vertical-align: middle;
@@ -172,6 +189,7 @@ tbody tr:first-child td {
 }
 .fs12 {
     font-size: 12px !important;
+    font-weight: normal;
 }
 .color_point {
     color: #fa2828 !important;
@@ -190,6 +208,7 @@ tbody tr:first-child td {
     width: 75px;
     text-align: center;
     font-size: 12px;
+    font-weight: normal;
 }
 .paging {
     text-align: center;
@@ -286,8 +305,31 @@ tbody tr:first-child td {
     background: #878d95;
     content: '';
 }
-
-
-
-
+.selectbox.acting .select{
+    border-color: #242428;
+}
+.ng-hiding {
+    display: none !important;
+}
+.select_list {
+    position: absolute;
+    border: 1px solid #242428;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1;
+    box-sizing: border-box;
+    border-top-width: 0;
+}
+.selectbox .select_list li a {
+    font-size: 12px;
+    line-height: 26px;
+    padding-left: 10px;
+    color: #242428;
+}
+.selectbox .select_list li:hover {
+   background: url( https://th.bing.com/th/id/OIP.GcpUB3UxsaArPwX00cYZmQHaEK?w=304&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7) -172px -92px
+}
 
