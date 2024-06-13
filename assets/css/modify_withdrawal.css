@@ -20,6 +20,9 @@ a {
 p {
     margin: 0;
 }
+ul, li {
+    list-style: none;
+}
 .common_header {
     padding: 0 16px;
     position: relative;
@@ -143,6 +146,19 @@ p {
 .outbxcon {
     line-height: 15px;
     font-weight: bold;
+}
+.outbxcon li {
+    padding-left: 5px;
+    position: relative;
+}
+.outbxcon li::before {
+    content: " ";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    top: 6.4px;
+    left: 0;
+    background-color: #7a2325
 }
 .checkbox {
     margin-right: 1px;

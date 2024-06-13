@@ -17,6 +17,9 @@ a {
 p {
     margin: 0;
 }
+button {
+    cursor: pointer;
+}
 .common_header {
     padding: 0 16px;
     position: relative;
