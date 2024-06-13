@@ -4,6 +4,9 @@
 /* common */
 .inner {width:1120px; margin:0 auto;}
 img {width:100%; display: block;}
+.point{color: #fa2828;}
+
+
 /* 메인페이지 */
 /* header */
 header .utill {height: 40px;background-color: #f8f9fa;}
@@ -26,6 +29,15 @@ header .utill ul .utill_link a {display: block;padding: 10px 6px 9px;font-size: 
 .gnb_box .gnb_list .gnb_link a{font-weight: 700;}
 .main_swiper_box {max-width:1920px;height:560px;text-align: center;}
 
+/* banner */
+.main_swiper_box{position:relative;width:1920px;height:560px;}
+.big_banner{height:560px;width: 100%;text-align: center;}
+.big_banner img{height:100%;width: 100%;}
+.sm_box{position: absolute;bottom: 57px;left: 50%;margin-left: -560px;z-index: 2;} 
+.sm_box .sm_img{margin-right: 10px;display: inline-block;overflow: hidden;width: 55px;height: 68px;border-radius: 6px;background: #f5f6f9;}
+.sm_box .sm_img:hover a{opacity: 1; border: 2px solid #fff;border-radius: 6px;}
+.sm_box .sm_img a {opacity: 0.8;}
+
 /* 티켓오픈 */
 .con_box{margin-top:110px;}
 .con_header {margin-top: 80px; display: flex;justify-content: space-between;}
@@ -35,7 +47,16 @@ header .utill ul .utill_link a {display: block;padding: 10px 6px 9px;font-size: 
 .item_list{display: flex;flex-wrap: wrap;margin:-20px -30px 0 0;}
 .item_list .card_item{margin: 50px 30px 0 0; width: 200px;}
 .card_item .img_box {width:200px;height:247px;border-radius: 10px;overflow: hidden;}
-.card_item .img_box img:hover{transform: scale(1.1);transition: transform .2s cubic-bezier(0.165, 0.84, 0.44, 1);}
+.card_item_04 .img_box img:hover ,.card_item .img_box img:hover{transform: scale(1.1);transition: transform .2s cubic-bezier(0.165, 0.84, 0.44, 1);}
 .txt_box {margin-top: 16px;font-size: 14px;line-height: 22px;}
 .txt_box .item_tit {display: block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;max-height: 52px;font-size: 18px;line-height: 26px;color: #242428;}
-.txt_box .item_date{margin-top: 6px;color: #fa2828;}
+.txt_box .info_box {margin-top: 6px;}
+.txt_box .info_box > span {display:block;color: #62676c;}
+.txt_box .info_box .item_sub_tit {font-weight: 700;}
+
+/* 동영상 */
+.bg_gray{background: #f5f6f9;}
+
+/* 전시 */
+.card_item_04{margin: 50px 28px 0 0;width: 259px;}
+.card_item_04 .img_box{border-radius: 10px;overflow: hidden;width: 259px;height: 320px;}
