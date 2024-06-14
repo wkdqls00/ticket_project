@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/footer.css">
-    <script src="jquery-1.12.4.min.js"></script>
+    <script src="/assets/js/jquery-1.12.4.min.js"></script>
     <!-- 스와이퍼 스크립트 -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -22,18 +22,30 @@
                 $(this).parent().addClass('on').siblings().removeClass('on');
                 
             });
-            // $('.main_swiper_box .sm_box li').mouseover(function(e){
-            //     e.preventDefault();
+            $('.main_swiper_box .sm_box li').mouseover(function(e){
+                e.preventDefault();
                 
-            //     var imgsrc = $(this).attr('href');
-            //     $('.big_banner img').attr('src',imgsrc);
+                var imgsrc = $(this).attr('href');
+                $('.big_banner img').attr('src',imgsrc);
                 
-            //     $(this).parent().addClass('on').siblings().removeClass('on');
+                $(this).parent().addClass('on').siblings().removeClass('on');
                 
-            // });
+            });
         });
     
     </script>
+    <script>
+        // var swiper = new Swiper(".mySwiper", {
+        // slidesPerView : 1,
+        // centeredSlides: true,
+        // speed: 500,
+        // effect: fade,
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        //   },
+        // });
+      </script>
      <style>
         .card_item_04{margin: 50px 28px 0 0;width: 259px;}
      </style>
@@ -72,9 +84,10 @@
             </div>
         </header>
         <main>
-            <div class="main_swiper_box">
-                <div class="big_banner" id="big_banner">
-                    <a href="#"><img src="/assets/img/ticklink/BigBanner_01.jpg" alt="메인이미지"></a>
+        <div id="app">
+            <div class="main_swiper_box swiper mySwiper">
+                <div class="big_banner swiper-wrapper" id="big_banner">
+                    <div class="swiper-slide"><a href="#"><img src="/assets/img/ticklink/BigBanner_01.jpg" alt="메인이미지"></a></div>
                 </div>
                 <ul class="sm_box">
                     <li class="sm_img on">
@@ -167,7 +180,7 @@
                 </div>
             </section>
             <!-- 동영상 -->
-            <section class="con_box bg_gray">
+            <!-- <section class="con_box bg_gray">
                 <div class="inner">
                     <div class="con_header">
                         <h2 class="sec_tit">TICKET SPOT</h2>
@@ -182,7 +195,7 @@
                         </div>
                         
                 </div>
-            </section>
+            </section> -->
             <!-- 베스트 공연/전시 -->
             <section class="con_box">
                 <div class="inner">
@@ -372,6 +385,7 @@
                 </div>
 
             </section>
+        </div>
         </main>
 
         <!-- 맨 밑 하단 안내사항 -->
