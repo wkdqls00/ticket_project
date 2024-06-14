@@ -57,6 +57,47 @@ header .utill ul .utill_link a {display: block;padding: 10px 6px 9px;font-size: 
 .txt_box .info_box > span {display:block;color: #62676c;}
 .txt_box .info_box .item_sub_tit {font-weight: 700;}
 
+/* 길찾기 */
+.con_sub {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.area_btn_box {
+  display: flex;
+  margin-bottom: 20px;
+}
+.area_btn {
+  padding: 8px 18px 8px;
+  min-height: 40px;
+  border: 1px solid #dcdde1;
+  border-radius: 40px;
+  background: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  color: #242428;
+  outline: none;
+  letter-spacing: -0.03em;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.area_btn:hover {
+  border: 1px solid #242428;
+}
+.area_btn [aria-selected=true] {
+  padding: 6px 20px 8px;
+  border-color: #242428;
+  background: #242428;
+  color: #fff;
+}
+.area_btn_item {
+  margin-right: 6px;
+}
+.map_area {
+  height: 800px;
+  background-color: #cfd0d7;
+  margin-bottom: 40px;
+}
+
 /* 동영상 */
 .bg_gray{background: #f5f6f9;}
 
