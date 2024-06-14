@@ -104,7 +104,7 @@
             </div>
             <!-- 글쓰기 버튼 -->
             <div class="btnBox">
-              <button class="uButton bg_blue">글쓰기</button>
+              <button class="uButton bg_blue" id="postWriteBtn">글쓰기</button>
             </div>
             <!-- 밴드 안내 문구 -->
             <p class="bandTypeDesc">
@@ -223,7 +223,7 @@
       </div>
     </div>
     <!-- 팝업 : 글쓰기 -->
-    <div class="layerContainerView" tabindex="-1" id="postWriteEditor_popUp">
+    <div class="layerContainerView" tabindex="-1" id="postWriteEditor_popUp" style="display: none;">
       <div class="layerContainerInnerView">
         <div class="postEditorLayerView" style="position: relative;">
           <section class="lyWrap">
@@ -271,6 +271,9 @@
     $(function() {
       $(".postWriteEventWrapper").click(function() {
         $(".layerContainerView").css('display', 'block');
+      })
+      $("#postWriteBtn").click(function() {
+        $("#postWriteEditor_popUp").css('display', 'block');
       })
       $(".btnLyClose").click(function() {
         $(".layerContainerView").css('display', 'none');
