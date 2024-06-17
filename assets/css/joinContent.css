@@ -128,9 +128,12 @@ a {text-decoration: none;}
 .btnSns.Kakao > span:after {
     background-position-y: 25%;
 }
-
-
 .footer {
     width: 100%;
     height: 80px;
+}
+
+/*자바스크립트 연동 효과*/
+.special {
+    opacity: 0.5;
 }

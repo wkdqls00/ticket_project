@@ -143,7 +143,18 @@
                 nextStepButton.disabled = true; // 버튼 체크 비활성화
                 nextStepButton.style.backgroundColor = ""; // 기본 색상으로 돌아가게
             }
-        }
+        };
+
+         // 다음단계 버튼 누르면 약간 효과 주기
+        document.querySelector(".uBtn").addEventListener("mousedown", function() {
+            this.classList.add("special");
+        });
+        document.querySelector(".uBtn").addEventListener("mouseup", function() {
+            this.classList.remove("special");
+        });
+        document.querySelector(".uBtn").addEventListener("mouseleave", function() {
+            this.classList.remove("special");
+        });
     </script>
     
 </body>

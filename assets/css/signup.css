@@ -189,5 +189,10 @@ p {
     height: 50px;
     padding-bottom: 1px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 1.2rem;
+}
+
+/* 자바스크립트 연동 효과*/
+.special {
+    opacity: 0.5;
 }

@@ -137,12 +137,27 @@
                     </div>
                     <div class="btn_area"> <!--가입완료버튼-->
                         <div class="col">
-                            <button type="submit" class="btn point">가입완료</button>
+                            <button type="submit" class="btn point" disabled>가입완료</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </form>
+
+    <script>
+
+        // 가입완료 버튼에 약간 효과 주기
+        var button = document.querySelector(".btn.point");
+        button.addEventListener("mousedown", function() {
+            this.classList.add("special");
+        });
+        button.addEventListener("mouseup", function() {
+            this.classList.remove("special");
+        });
+        button.addEventListener("mouseleave", function() {
+            this.classList.remove("special");
+        });
+    </script>
 </body>
 </html>

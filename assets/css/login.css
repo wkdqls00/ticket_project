@@ -120,6 +120,7 @@ input:focus {outline:none;}
     border-radius: 1.2rem;
     background-color: #fa2828;
     border: 0;
+    cursor: pointer;
 }
 .loginBtn span {
     font-weight: 700;
@@ -183,3 +184,8 @@ input:focus {outline:none;}
 .snsLogin li a.naver {
     background: url(//openimage.interpark.com/UI/login/mobile/icon_naver.svg) no-repeat center #1ec800;
 } 
+
+/* 자바스크립트 연동 효과*/
+.special {
+    opacity: 0.5;
+}
