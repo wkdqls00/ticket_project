@@ -194,8 +194,10 @@ header{
   margin-left: 50px;
 }
 .prenextbutton{
-  margin-right: 3px;
-  margin-top: 53px;
+  position: absolute;
+  left: 774px;
+  top: 700px;
+  width: 207px;
   height: 56px;
   display: flex;
   justify-content: space-between;
@@ -207,9 +209,6 @@ header{
   border-radius: 5px;
   border: 2px solid #DCDDE1;
   cursor: pointer;
-}
-.prenextbutton > div:nth-child(1){
-  margin-left: -3px;
 }
 .prenextbtn:hover {
   background-color: #DEDEDE;

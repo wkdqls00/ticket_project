@@ -163,9 +163,10 @@ main{
   border: 1px solid #242428;
 }
 .prenextbutton{
-  margin-top: 155px;
-  margin-left: 51px;
-  width: 225px;
+  position: absolute;
+  left: 774px;
+  top: 700px;
+  width: 207px;
   height: 56px;
   display: flex;
   justify-content: space-between;
