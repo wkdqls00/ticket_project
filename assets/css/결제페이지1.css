@@ -41,7 +41,7 @@ header{
   width: 720px;
 }
 #main > div:nth-child(2){
-  width: 280px;
+  width: 28
 }
 #main > div:nth-child(1) > div:nth-child(1){
   height: 84px;
@@ -52,6 +52,25 @@ header{
   position: relative;
   left: 610px;
   top: -40px;
+}
+#playhallseat {
+  width: 680px;
+  height: 560px;
+  /* overflow: hidden; */
+  position: relative;
+}
+/* #playhallseat img{
+  position: absolute; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: none;
+  max-height: none;
+  object-fit: none; */
+/* } */
+.reserved{ /*예약된좌석*/
+  position: absolute;
+  cursor: pointer;
 }
 .episodeBtn {
   width: 76px;
@@ -69,11 +88,8 @@ header{
 .episodeBtn:hover {
   background-color: #DEDEDE;
 }
-.playhallseatimg{
-  margin-left: 20px;
-  width: 680px;
-  height: 604px;
-}
+
+
 .playhallseatimgsmall{
   width: 210px;
   height: 174px;
@@ -133,6 +149,14 @@ header{
   align-items: center;
   justify-content: space-between;
 }
+.box_block3{
+  height: 32px;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
 .colorbox{
   display: inline-block;
   width: 13px;
@@ -170,10 +194,11 @@ header{
   margin-left: 50px;
 }
 .prenextbutton{
-margin-top: 50px;
-height: 56px;
-display: flex;
-justify-content: space-between;
+  margin-right: 3px;
+  margin-top: 53px;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
 }
 .prenextbtn{
   width: 100px;
@@ -182,6 +207,9 @@ justify-content: space-between;
   border-radius: 5px;
   border: 2px solid #DCDDE1;
   cursor: pointer;
+}
+.prenextbutton > div:nth-child(1){
+  margin-left: -3px;
 }
 .prenextbtn:hover {
   background-color: #DEDEDE;
