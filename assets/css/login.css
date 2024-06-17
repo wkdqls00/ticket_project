@@ -101,6 +101,10 @@ input:focus {outline:none;}
     border: none;
     opacity: .00001;
 }
+.checkbox input[type="checkbox"]:checked + label {
+    background: url(//openimage.interpark.com/UI/login/mobile/icon_checkbox_on.svg) no-repeat;
+    background-size: 21px;
+}
 .loginButtonBox {
     position: relative;
     top: 30px;
