@@ -1,3 +1,6 @@
+* {
+    margin: 0;
+}
 a{
     text-decoration: none;
     color: grey;
@@ -113,6 +116,7 @@ input {
     left: 40px;
     top: 10px;
     position: absolute;
+    border-radius: 7px;
 }
 .quick_menu_item.reserve a:before {
     background-size: 400px;
