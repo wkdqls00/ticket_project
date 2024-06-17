@@ -305,9 +305,10 @@ input[type="checkbox"]:checked::after {
   letter-spacing: -1px;
 }
 .prenextbutton{
-  margin-top: 116px;
-  margin-left: 51px;
-  width: 225px;
+  position: absolute;
+  left: 774px;
+  top: 700px;
+  width: 207px;
   height: 56px;
   display: flex;
   justify-content: space-between;
