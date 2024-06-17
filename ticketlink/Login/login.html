@@ -85,7 +85,18 @@
             }   else {
                 check.value = "N";
             }
-        })
+        });
+
+        // 로그인 버튼 누르면 약간 효과
+        document.querySelector(".loginBtn").addEventListener("mousedown", function() {
+            this.classList.add("special");
+        });
+        document.querySelector(".loginBtn").addEventListener("mouseup", function() {
+            this.classList.remove("special");
+        });
+        document.querySelector(".loginBtn").addEventListener("mouseleave", function() {
+            this.classList.remove("special");
+        });
     </script>
 </body>
 </html>
