@@ -182,44 +182,43 @@
       margin-left: 15px;
     }
     input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 17px;
-    height: 17px;
-    border: 1px solid #000;
-    position: relative;
-    cursor: pointer;
-}
-
-input[type="checkbox"]:checked {
-    background-color: #000;
-    border: 2px solid #000;
-}
-
-input[type="checkbox"]:checked::after {
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 3px;
-    width: 6px;
-    height: 12px;
-    border: solid #fff;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-}
-  .end{
-    margin: 20px auto;
-    height: 50px;
-    font-size: 18px;
-    width: 144px;
-    height: 50px;
-    border-radius: 50px;
-  }
-  .endbox{
-    width: 800px;
-  }
+      appearance: none;
+      -webkit-appearance: none;
+      width: 17px;
+      height: 17px;
+      border: 1px solid #000;
+      position: relative;
+      cursor: pointer;
+    }
+    input[type="checkbox"]:checked {
+      background-color: #000;
+      border: 2px solid #000;
+    }
+    input[type="checkbox"]:checked::after {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: 3px;
+      width: 6px;
+      height: 12px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+    .end{
+      height: 50px;
+      font-size: 18px;
+      width: 144px;
+      height: 50px;
+      border-radius: 50px;
+      margin-left: 328px;
+    }
+    .endbox{
+      margin: 30px auto;
+      width: 800px;
+    }
   </style>
-  <title>Document</title>
+  <title>문의하기</title>
 </head>
 <body>
   <div id="container">
@@ -285,11 +284,10 @@ input[type="checkbox"]:checked::after {
     </div>
     <div class="agreecheck"><input type="checkbox">
       <div class="agreeinfo">위,개인정보 수집 및 활용에 동의합니다.
-        </div>
+      </div>
     </div>
-    <div class="endbox"><div style="margin: 0 auto;"><button class="end">접수</button></div></div>
+    <div class="endbox"><button class="end" onclick="location.href='/ticketlink/inquire/inquire_success.html'">접수</button></div>
   </div>
-
   <script>
     document.getElementById('emailSelector').addEventListener('change', function() {
       var selectedDomain = this.value;
