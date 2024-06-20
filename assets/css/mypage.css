@@ -178,6 +178,7 @@ input {
     position: relative;
     box-sizing: border-box;
     font-weight: bold;
+    float: none !important;
 }
 .help_submenu {
     font-size: 14px;
