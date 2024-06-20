@@ -332,4 +332,7 @@ tbody tr:first-child td {
 .selectbox .select_list li:hover {
     background-color: #f8f9fa;
 }
-
+.search {
+    background-color: #242428;
+    color: #fff !important;
+}
