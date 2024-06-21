@@ -1,3 +1,17 @@
+
+/* input:password 눈모양 없애는 코드*/
+input[type="password"]::-ms-reveal, 
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-clear-button,
+input[type="password"]::-webkit-caps-lock-indicator,
+input[type="password"]::-webkit-password-toggle-button {
+    display: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +33,9 @@ p {
 }
 button {
     cursor: pointer;
+}
+input::placeholder {
+    color: #aaa;
 }
 .common_header {
     padding: 0 16px;
@@ -218,11 +235,148 @@ button {
     height: 45px;
     font-size: 16px;
 }
-.btn_red {
+.btn_red_success {
     width: 100%;
     background-color: #ef3e42;
     border: 1px solid #ef3e42;
     color: #fff;
     height: 45px;
     font-size: 16px;
+}
+.modify_box_small {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+.em_noti {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #aaa;
+}
+.btn_red {
+    display: block;
+    background-color: #ef3e42;
+    width: 100%;
+    height: 45px;
+    line-height: 42px;
+    border-radius: 2px;
+    border: 1px solid #ef3e42;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+}
+.icon_noti {
+    background: url("http://openimage.interpark.com/.ui/openId/pc/icon_noti.png") no-repeat 0 2px;
+    display: block;
+    margin-top: 10px;
+    padding-left: 20px;
+    font-size: 13px;
+    color: #aaa;
+}
+.con_input {
+    width: 100%;
+    height: 40px;
+    padding-left: 8px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-sizing: border-box;
+    vertical-align: top;
+    font-size: 15px;
+    color: #202020;
+}
+.btn_area {
+    margin-top : 10px;
+}
+.style_input {
+    position: relative;
+}
+.email_box .style_input {
+    width: 272px;
+    margin-right: 8px;
+    vertical-align: top;
+    display: inline-block;
+}
+.custom_select {
+    display: inline-block;
+    width: 130px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+}
+.new_list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    line-height: 38px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    background: #f9f9f9 url("https://openimage.interpark.com/.ui/openId/pc/arrow_select.png") no-repeat right center;
+    padding: 0 25px 0 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #202020;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.options {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+    border: 1px solid #313131;
+    background-color: #fff;
+    
+}
+.custom_select.acting .options {
+    display: block;
+}
+.option {
+    padding: 3px 10px;
+    font-size: 13px;
+    line-height: 16px;  
+}
+.option:hover {
+    background: #ededed;
+    cursor: pointer;
+}
+.del_btn {
+    position: absolute;
+    top: 9px;
+    right: 11px;
+    z-index: 2;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    background: url(//openimage.interpark.com/.ui/openId/pc/btn_input_del.png) no-repeat center center #fff;
+    outline: 0;
+    cursor: pointer;
+}
+
+
+/* 자바스크립트 적용 css */
+.modify_box_small.on { 
+    display: block !important;
+    opacity: 1;
+    height: 176px;
+    margin: 0 0 20px 90px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    
+}
+.btn_common.red {
+    border: 1px solid #ef3e42;
+    background-color: #fff;
+    color: #ef3e42;
 }

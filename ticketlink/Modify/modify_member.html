@@ -52,6 +52,13 @@
                                     <span>이준영</span>
                                     <a href="#" class="btn_common" id="name_open">수정</a>
                                 </dd>
+                                <div class="modify_box_small">
+                                  <span class="em_noti">개명하신 경우 본인인증 하시면 이름이 변경됩니다.</span>
+                                  <div class="enter_box">
+                                    <p class="btn_block"><a href="#" class="btn_red">본인명의 휴대폰으로 인증</a></p>
+                                    <span class="icon_noti">이동통신사 및 신용평가기관 모두 변경된 이름으로 등록되어 있는지 확인 후 진행해주세요.</span>
+                                  </div>
+                                </div>
                                 
                             </dl>
                             <dl>
@@ -60,13 +67,58 @@
                                     <span>010-1234-5678</span>
                                     <a href="#" class="btn_common" id="name_open">수정</a>
                                 </dd>
+                                <div class="modify_box_small">
+                                  <span class="em_noti">휴대폰번호 변경을 위해 인증이 필요합니다.</span>
+                                  <div class="enter_box">
+                                    <div class="style_input">
+                                      <input type="text" class="con_input" placeholder="변경 휴대폰번호 (-없이 입력)">
+                                      <span id="conClear" class="del_btn" style="display: none;"></span>
+                                    </div>
+                                  </div>
+                                  <p class="btn_area"><a href="#" class="btn_red">인증번호 전송</a></p>
+
+                                </div>
                             </dl>
                             <dl>
                                 <dt>이메일</dt>
                                 <dd class="btn_pd">
                                     <span>tjsans9069@naver.com</span>
-                                    <a href="#" class="btn_common" id="name_open">수정</a>
+                                    <a href="#" class="btn_common " id="name_open">수정</a>
                                 </dd>
+                                <div class="modify_box_small">
+                                  <span class="em_noti">이메일 변경을 위해 인증이 필요합니다.</span>
+                                  <div class="enter_box">
+                                    <div class="email_box">
+                                      <div class="style_input">
+                                        <input type="email" class="con_input" placeholder="변경 이메일">
+                                        <span id="conClear" class="del_btn" style="display: none;"></span>
+                                      </div>
+                                      <div class="custom_select">
+                                        <!-- <select name="slctEmailList" id="slctEmailList" style="visibility: hidden;">
+                                          <option value="">선택하세요</option>
+                                          <option value="naver.com">naver.com</option>
+                                          <option value="hanmail.net">hanmail.net</option>
+                                          <option value="gmail.com">gmail.com</option>
+                                          <option value="nate.com">nate.com</option>
+                                          <option value="hotmail.com">hotmail.com</option>
+                                          <option value="etc"> 직접입력</option>
+                                        </select> -->
+                                        <div class="new_list">직접입력</div>
+                                        <ul class="options">
+                                          <li class="option">선택하세요</li>
+                                          <li class="option">naver.com</li>
+                                          <li class="option">daum.com</li>
+                                          <li class="option">gmail.com</li>
+                                          <li class="option">nate.com</li>
+                                          <li class="option">직접입력</li>
+                                        </ul>
+
+                                      </div>
+                                    </div>
+                                    
+                                    <p class="btn_area"><a href="#" class="btn_red">인증번호 전송</a></p>
+                                  </div>
+                                </div>
                             </dl>
                             <dl>
                                 <dt>생년월일</dt>
@@ -100,7 +152,7 @@
                             <button type="submit" class="btn_white">취소</button>
                         </span>
                         <span>
-                            <button type="submit" class="btn_red">수정</button>
+                            <button type="submit" class="btn_red_success">수정</button>
                         </span> 
                     </div> <!--취소, 수정 버튼-->
                 </div>
@@ -210,5 +262,64 @@
     </div>
   </div>
   
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+      // 수정버튼 기능
+      var btn = document.querySelectorAll(".btn_common");
+
+      btn.forEach(function(btn) {
+        btn.addEventListener("click", function() {
+
+        var content = this.parentElement.nextElementSibling;
+        content.classList.toggle("on"); // 수정버튼 누르면 박스나옴
+        this.classList.toggle("red"); // 수정버튼 누르면 빨간 취소버튼으로 바뀜
+          
+        if (this.innerText == "수정") {
+        this.innerText = "취소";
+        }
+        else 
+        this.innerText = "수정"
+        })
+      })
+
+      // 이메일 리스트 펼치는 기능
+      document.querySelector(".custom_select").addEventListener("click", function() {
+        this.classList.toggle("acting");
+      });
+
+
+      // 이메일 선택 기능
+      var text = document.querySelector(".new_list");
+      var list = document.querySelectorAll(".option");
+    
+      list.forEach(function(listItem) {
+                listItem.addEventListener("click", function() {
+                    text.innerText = listItem.innerText;
+                });
+          });
+      
+
+      // 보류 
+      var emailInput = document.querySelector('.email_box .con_input');
+      var emailDomainSelect = document.querySelectorAll('.option');
+
+      emailDomainSelect.forEach(function(option) {
+        option.addEventListener('click', function() {
+            var selectedDomain = option.innerText;
+            if (selectedDomain === '직접입력' || selectedDomain === '선택하세요') {
+              emailInput.value = '';  // 직접입력 선택하면 초기화
+            } else {
+                var emailParts = emailInput.value.split('@');
+                emailInput.value = emailParts[0] + '@' + selectedDomain;  
+            }
+          });
+      });
+
+
+      });
+  </script>
+  <script src="/assets/js/del_btn.js"></script>
 </body>
 </html>

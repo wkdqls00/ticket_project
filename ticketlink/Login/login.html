@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/assets/css/login.css">
     <title>Document</title>
-   
+    <style>
+       
     </style>
 </head>
 <body>
@@ -21,14 +22,16 @@
                 <div class="loginInner">
                     <div class="loginForm">
                         <div class="inputBox">
-                            <div class="inputId">
+                            <div class="style_input id">
                                 <label for="">
-                                    <input type="text" name="userId" id="userId" placeholder="아이디" class="inputText id">
+                                    <input type="text" name="userId" id="userId" placeholder="아이디" class="con_input id">
+                                    <span id="conClear" class="del_btn" style="display: none;"></span>
                                 </label>
                             </div>
-                            <div class="inputPw">
+                            <div class="style_input pw">
                                 <label for="">
-                                    <input type="text" name="userPw" id="userPw" placeholder="비밀번호" class="inputText pw">
+                                    <input type="password" name="userPw" id="userPw" placeholder="비밀번호" class="con_input pw">
+                                    <span id="conClear" class="del_btn" style="display: none;"></span>
                                 </label>
                             </div>
                         </div>
@@ -77,26 +80,31 @@
     
     <script>
         // 로그인 유지 버튼 기능
-        document.querySelector(".checkbox input").addEventListener("change", function() {
-            var check = document.querySelector(".checkbox input");
 
-            if (check.value === "N") {
-                check.value = "Y";
-            }   else {
-                check.value = "N";
-            }
-        });
+        document.addEventListener("DOMContentLoaded", function() {
 
-        // 로그인 버튼 누르면 약간 효과
-        document.querySelector(".loginBtn").addEventListener("mousedown", function() {
-            this.classList.add("special");
-        });
-        document.querySelector(".loginBtn").addEventListener("mouseup", function() {
-            this.classList.remove("special");
-        });
-        document.querySelector(".loginBtn").addEventListener("mouseleave", function() {
-            this.classList.remove("special");
+            document.querySelector(".checkbox input").addEventListener("change", function() {
+                var check = document.querySelector(".checkbox input");
+
+                if (check.value === "N") {
+                    check.value = "Y";
+                }   else {
+                    check.value = "N";
+                }
+            });
+
+            // 로그인 버튼 누르면 약간 효과
+            document.querySelector(".loginBtn").addEventListener("mousedown", function() {
+                this.classList.add("special");
+            });
+            document.querySelector(".loginBtn").addEventListener("mouseup", function() {
+                this.classList.remove("special");
+            });
+            document.querySelector(".loginBtn").addEventListener("mouseleave", function() {
+                this.classList.remove("special");
+            });
         });
     </script>
+    <script src="/assets/js/del_btn.js"></script>
 </body>
 </html>
