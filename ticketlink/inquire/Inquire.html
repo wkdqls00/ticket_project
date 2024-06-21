@@ -129,6 +129,9 @@
       padding-top: 20px;
       padding-left: 10px;
     }
+    .content7 > div:nth-child(1){
+      width: 160px;
+    }
     .email{
       width: 175px;
       height: 38px;
@@ -159,10 +162,6 @@
       height: 100px;
       padding-left: 8px;
       resize: none;
-    }
-    #addfile{
-      width: 100px;
-      height: 40px;
     }
     .addfileinfo{
       font-size: 16px;
@@ -212,10 +211,46 @@
       height: 50px;
       border-radius: 50px;
       margin-left: 328px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .end:hover{
+      background-color: #555555;
     }
     .endbox{
       margin: 30px auto;
       width: 800px;
+    }
+    .file-input-container {
+      position: relative;
+      display: inline-block;
+    }
+    .file-input {
+      display: none;
+    }
+    .file-label {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #242424;
+      transition: background-color 0.3s ease;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      height: 40px;
+    }
+    .file-label:hover {
+      background-color: #555555;
+    }
+    #file_name{
+      padding-top: 4px;
+      letter-spacing: -1px;
+      font-size: 14px;
+      border: 0.5px solid #D2D2D2;
+      height: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space : nowrap;
+      background-color: #D2D2D2;
     }
   </style>
   <title>문의하기</title>
@@ -271,7 +306,11 @@
           <textarea name="content" id="content"></textarea>
         </div>
         <div class="content7">
-          <div><button id="addfile">첨부파일</button></div>
+          <div class="file-input-container">
+            <input type="file" id="addfile" class="file-input">
+            <label for="addfile" class="file-label">파일 선택</label>
+            <div id="file_name" class="file-name"></div>
+          </div>
           <div class="addfileinfo">
             10MB 이내 모든 이미지 및 허용된 확장자 파일을 최대 5개까지<br>첨부 가능합니다.!
           </div>
@@ -293,6 +332,15 @@
       var selectedDomain = this.value;
       document.getElementById('emailDomain').value = selectedDomain;
     });
+    document.addEventListener('DOMContentLoaded', function() {
+      var fileInput = document.getElementById('addfile');
+      var fileNameElement = document.getElementById('file_name');
+      fileNameElement.textContent = '선택된 파일이 없습니다.';
+      fileInput.addEventListener('change', function(event) {
+        var fileName = fileInput.files.length > 0 ? fileInput.files[0].name : '선택된 파일이 없습니다.';
+        fileNameElement.textContent = fileName;
+      });
+    })
 </script>
 </body>
 </html>
