@@ -4,111 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>주간베스트</title> 
-  <link rel="stylesheet" type="text/css" href="/assets/css/ranking.css">
-  <link rel="stylesheet" type="text/css" href="/assets/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/ticketlink/Ranking_MainP/ranking.css">
+  <link rel="stylesheet" href="/assets/css/common.css">
+  <link rel="stylesheet" href="/assets/css/reset.css">
 </head>
 
 <!-- 맨 위 상단 메뉴바  -->
 <body>
-  <div id="Page_header">
-    <div class="header_util_left">
-      <ul class="header_util_list">
-        <li class="header_util_item">
-          <button type="button" class="btn_dropdown" aria-expanded="false">
-            KOR
-            <!-- ::after -->
-          </button>
-          <div class="header_dropdown_content">
-            <ul class="header_language_list">
-              <li class="header_language_item">
-                <a class="header_lanaguage_link">ENG</a>
-              </li>
-              <li class="header_language_item">
-                <a class="header_language_link">JPN</a>
-              </li>
+  <header>
+    <div class="utill">
+        <div class="inner">
+            <ul>
+                <li class="utill_link"><a href="#">로그인</a></li>
+                <li class="utill_link"><a href="#">예매확인/취소</a></li>
+                <li class="utill_link"><a href="#">회원가입</a></li>
+                <li class="utill_link"><a href="#">고객센터</a></li>
+                <li class="utill_link"><a href="#">마이페이지</a></li>
             </ul>
-          </div>
-        </li>
-      </ul>
+        </div> 
     </div>
-    <div class="header_util_right">
-      <ul class="header_util_list">
-        <li class="header_util_item">
-          <a href="#" class="header_util_link">로그인</a>
-        </li>
-        <li class="header_util_item">
-          <!-- ::before -->
-          <a href="#" class="header_util_link">예매확인/취소</a>
-        </li>
-        <li class="header_util_item">
-          <!-- ::before -->
-          <a href="#" class="header_util_link">회원가입</a>
-          </li>
-        <li class="header_util_item">
-          <!-- ::before -->
-          <a href="/help/main" class="header_util_link">고객센터</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-<!-- 티켓 링크 제목 -->
-  <div id="Page_header2" class="center">
-    <h1 class="header_title">
-      <a class="header_title_link" href="/">
-        <span class="common_icon0 logo_black_kr">
-          <span class="blind">티켓링크</span>
-        <!-- after -->
-        </span>
-      </a>
-    </h1>
-    <div class="header_nav">
-      <a class="header_nav_link" aria-current="true" href="/">공연/전시</a>
-    </div>
-  </div>
-<!-- 티겟 링크 상단 메뉴 -->
-  <div id="Page_header3" class="center">
-    <div class="page_header3_inner">
-      <div class="page_header3_area">
-        <ul class="page_header3_list1">
-          <li class="page_header3_item1">
-            <a class="page_header3_link" aria-current="false" href="/home">홈</a>
-          </li>
-          <li class="page_header3_item2">
-            <a class="page_header3_link" aria-current="false" href="/performance/10" target="_self">공연</a>
-          </li>
-          <li class="page_header3_item3">
-            <a class="page_header3_link" aria-current="false" href="/exhibition/11" target="_self">전시</a>
-          </li>
-        </ul>
-        <ul class="page_header3_list2">
-          <li class="page_header3_item4">
-            <a class="page_header3_link1" aria-current="page" href="/ranking">
-              <!-- berfore -->
-              랭킹
-            </a>
-          <li class="page_header3_item5">
-            <a class="page_header3_link1" aria-current="false" href="/local">
-              지역
-            </a>
-          </li>
-          <li class="page_header3_item5">
-            <a href="/venue/main" class="page_header3_link1">공연장</a>
-          </li>
-        </ul>
+    <div class="nav_box">
+        <div class="inner">
+            <h1 class="logo"><a href="../html/main.html">로고</a></h1>
+            <ul class="nav">
+                <li><a href="#">공연/전시</a></li>
+                <li><a href="#">커뮤니티</a></li>
+            </ul>
         </div>
-          <div class="header3_search">
-            <div class="header3_search_box">
-              <input type="search" name="search" id="search" class="header3_search_input" placeholder="검색어를 입력해주세요" value>
-              <button type="button" class="header3_search_btn">
-                <span class="icon_search">
-                  <span class="blind">검색</span>
-                  <!-- after -->
-                </span>
-              </button>
-            </div>
-          </div>
     </div>
-  </div>
+    <div class="gnb_box">
+        <div class="inner">
+            <ul class="gnb_list">
+                <li class="gnb_link"><a href="#">홈</a></li>
+                <li class="gnb_link"><a href="#">공연</a></li>
+                <li class="gnb_link"><a href="#">전시</a></li>
+                <li class="gnb_link"><a href="#">랭킹</a></li>
+                <li class="gnb_link"><a href="#">커뮤니티</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
 <!-- 본문 랭킹 이미지색 & 주간 랭킹 -->
   <div id="Ranking_Bg" style="background-color: rgb(163, 175, 148);">
   </div>
@@ -262,7 +197,7 @@
                 <span class="common_icon1 icon_calendar ty_md">
                   <!-- ::after -->
                 </span>
-                <span class="blind">현재 집게기간 : </span>
+                <span class="blind">현재 집계기간 : </span>
                 <span class="period_current"><b>2024년 6월 6일 (목)</b></span>
                 <span class="blind">집계기간 변경하기</span>
                   <!-- ::after -->
@@ -438,16 +373,12 @@
             </td>
             <td>
               <div class="ranking_product_info">
-                <a class="ranking_product_link">
+                <a class="ranking_product_link" href="http://127.0.0.1:5500/Detailed_Infor(Integrated)/Perfor.detail(C).html">
                   <span class="ranking_product_imgbox">
-               
                     <img src="	https://image.toast.com/aaaaab/ticketlink/TKL_2/gloomy_pst_0603.jpg" alt="뮤지컬  &lt;사의찬미&gt;" class="ranking_product_img">
-             
                     <!-- after -->
                   </span>
-      
                   <span class="ranking_product_title">뮤지컬 &lt;사의찬미&gt;</span>
-           
                 </a>
               </div>
             </td>
@@ -467,7 +398,7 @@
             </td>
             <td>
               <div class="ranking_product_reserve">
-                <a class="common_btn btn_primary btn_medium" aria-disabled="false">예매하기</a>
+                <a class="common_btn btn_primary btn_medium" aria-disabled="false" href="http://127.0.0.1:5500/Detailed_Infor(Integrated)/Perfor.detail(C).html">예매하기</a>
               </div>
             </td>
           </tr>

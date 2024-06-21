@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>공연상세정보 내용</title>
-  <link rel="stylesheet" type="text/css" href="/assets/css/detail.css"/>
+  <link rel="stylesheet" type="text/css" href="/ticketlink/Detailed_Infor(Integrated)/detail(C).css"/>
+  <link rel="stylesheet" href="/assets/css/common.css">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -122,6 +125,35 @@
 </script>
 
 
+
+<script>
+
+  const tabList = document.querySelectorAll('.common_tab_list .common_tab_item button');
+  const contents = document.querySelectorAll('#detail_tabcontent .section_detail')
+  let activeCont = ''; // 현재 활성화 된 컨텐츠 (기본:#tab1 활성화)
+
+  for(var i = 0; i < tabList.length; i++){
+    tabList[i].querySelector('.common_tab_btn').addEventListener('click', function(e){
+      e.preventDefault();
+      for(var j = 0; j < tabList.length; j++){
+        // 나머지 버튼 클래스 제거
+        tabList[j].classList.remove('common_tab_item');
+
+        // 나머지 컨텐츠 display:none 처리
+        contents[j].style.display = 'none';
+      }
+
+      // 버튼 관련 이벤트
+      this.parentNode.classList.add('common_tab_item');
+
+      // 버튼 클릭시 컨텐츠 전환
+      activeCont = this.getAttribute('button');
+      document.querySelector(activeCont).style.display = 'block';
+    });
+  }
+
+</script>
+
 </head>
 
 <!-- section 나눠줘야 함  -->
@@ -129,105 +161,39 @@
 <body>
 <!-- 맨 위 상단 메뉴바  -->
 <body>
-  <div id="Page_header">
-    <div class="header_util_left">
-      <ul class="header_util_list">
-        <li class="header_util_item">
-          <button type="button" class="btn_dropdown" aria-expanded="false">
-            KOR
-            <!-- ::after -->
-          </button>
-          <div class="header_dropdown_content">
-            <ul class="header_language_list">
-              <li class="header_language_item">
-                <a class="header_lanaguage_link">ENG</a>
-              </li>
-              <li class="header_language_item">
-                <a class="header_language_link">JPN</a>
-              </li>
+  <header>
+    <div class="utill">
+        <div class="inner">
+            <ul>
+                <li class="utill_link"><a href="#">로그인</a></li>
+                <li class="utill_link"><a href="#">예매확인/취소</a></li>
+                <li class="utill_link"><a href="#">회원가입</a></li>
+                <li class="utill_link"><a href="#">고객센터</a></li>
+                <li class="utill_link"><a href="#">마이페이지</a></li>
             </ul>
-          </div>
-        </li>
-      </ul>
+        </div> 
     </div>
-    <div class="header_util_right">
-      <ul class="header_util_list">
-        <li class="header_util_item">
-          <a href="#" class="header_util_link">로그인</a>
-        </li>
-        <li class="header_util_item">
-          <!-- ::before -->
-          <a href="#" class="header_util_link">예매확인/취소</a>
-        </li>
-        <li class="header_util_item">
-          <!-- ::before -->
-          <a href="#" class="header_util_link">회원가입</a>
-          </li>
-        <li class="header_util_item">
-          <!-- ::before -->
-          <a href="/help/main" class="header_util_link">고객센터</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-<!-- 티켓 링크 제목 -->
-  <div id="Page_header2" class="center">
-    <h1 class="header_title">
-      <a class="header_title_link" href="/">
-        <span class="common_icon0 logo_black_kr">
-          <span class="blind">티켓링크</span>
-        <!-- after -->
-        </span>
-      </a>
-    </h1>
-    <div class="header_nav">
-      <a class="header_nav_link" aria-current="true" href="/">공연/전시</a>
-    </div>
-  </div>
-<!-- 티겟 링크 상단 메뉴 -->
-  <div id="Page_header3" class="center">
-    <div class="page_header3_inner">
-      <div class="page_header3_area">
-        <ul class="page_header3_list1">
-          <li class="page_header3_item1">
-            <a class="page_header3_link" aria-current="false" href="/home">홈</a>
-          </li>
-          <li class="page_header3_item2">
-            <a class="page_header3_link" aria-current="false" href="/performance/10" target="_self">공연</a>
-          </li>
-          <li class="page_header3_item3">
-            <a class="page_header3_link" aria-current="false" href="/exhibition/11" target="_self">전시</a>
-          </li>
-        </ul>
-        <ul class="page_header3_list2">
-          <li class="page_header3_item4">
-            <a class="page_header3_link1" aria-current="page" href="/ranking">
-              <!-- berfore -->
-              랭킹
-            </a>
-          <li class="page_header3_item5">
-            <a class="page_header3_link1" aria-current="false" href="/local">
-              지역
-            </a>
-          </li>
-          <li class="page_header3_item5">
-            <a href="/venue/main" class="page_header3_link1">공연장</a>
-          </li>
-        </ul>
+    <div class="nav_box">
+        <div class="inner">
+            <h1 class="logo"><a href="../html/main.html">로고</a></h1>
+            <ul class="nav">
+                <li><a href="#">공연/전시</a></li>
+                <li><a href="#">커뮤니티</a></li>
+            </ul>
         </div>
-          <div class="header3_search">
-            <div class="header3_search_box">
-              <input type="search" name="search" id="search" class="header3_search_input" placeholder="검색어를 입력해주세요" value>
-              <button type="button" class="header3_search_btn">
-                <span class="icon_search">
-                  <span class="blind">검색</span>
-                  <!-- after -->
-                </span>
-              </button>
-            </div>
-          </div>
     </div>
-  </div>
+    <div class="gnb_box">
+        <div class="inner">
+            <ul class="gnb_list">
+                <li class="gnb_link"><a href="#">홈</a></li>
+                <li class="gnb_link"><a href="#">공연</a></li>
+                <li class="gnb_link"><a href="#">전시</a></li>
+                <li class="gnb_link"><a href="#">랭킹</a></li>
+                <li class="gnb_link"><a href="#">커뮤니티</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
   
 
   <section id="s1" class="border">
@@ -275,7 +241,7 @@
                   A석 <em class="text_emphasis">55,000</em>원
                 </li>
               </ul>
-              <img src="/assets/img/ticklink/price_more.png" alt="가격정보더보기버튼" style="margin-top: 18px;">
+              <img src="/assets/img/ticklink/price_more.png" alt="가격정보더보기버튼" style="margin-top: 18px; width: unset;">
               </div>
             </li>
             <li class="product_info_item">
@@ -289,7 +255,7 @@
                     장애인/국가유공자 할인 <em class="text_emphasis">30</em>% 할인
                   </li>
                 </ul>
-                <img src="/assets/img/ticklink/saleinfo.png" alt="할인정보" style="margin-top: 18px;">
+                <img src="/assets/img/ticklink/saleinfo.png" alt="할인정보" style="margin-top: 18px; width: unset;">
                 </div>
               </div>
             </li>
@@ -368,38 +334,38 @@
 <!-- 공연정보 탭바  -->
   <section id="common_section section_tab"> 
     <div id="detail_tab">
-      <div class="common_tab tyupe_linebox">
+      <div class="common_tab type_linebox">
         <div class="common_tab_area">
           <ul class="common_tab_list" role="tablist">
             <li class="common_tab_item is-active" role="none">
               <!-- before -->
-               <button type="button" class="common_tab_btn" role="tab" aria-selected="true">
+              <button type="button" class="common_tab_btn" role="tab" aria-selected="true" id="detail_information_btn">
                 <span>상세정보</span>
-               </button>
+              </button>
             </li>
             <li class="common_tab_item is-active" role="none">
               <!-- before -->
-               <button type="button" class="common_tab_btn" role="tab" aria-selected="false">
+              <button type="button" class="common_tab_btn" role="tab" aria-selected="false" id="review_btn">
                 <span>관람후기</span>
-               </button>
+              </button>
             </li>
             <li class="common_tab_item is-active" role="none">
               <!-- before -->
-               <button type="button" class="common_tab_btn" role="tab" aria-selected="false">
+              <button type="button" class="common_tab_btn" role="tab" aria-selected="false" id="preview_btn">
                 <span>기대평</span>
-               </button>
+              </button>
             </li>
             <li class="common_tab_item is-active" role="none">
               <!-- before -->
-               <button type="button" class="common_tab_btn" role="tab" aria-selected="false">
+              <button type="button" class="common_tab_btn" role="tab" aria-selected="false" id="place_btn">
                 <span>장소정보</span>
-               </button>
+              </button>
             </li>
             <li class="common_tab_item is-active" role="none">
               <!-- before -->
-               <button type="button" class="common_tab_btn" role="tab" aria-selected="false">
+              <button type="button" class="common_tab_btn" role="tab" aria-selected="false" id="productNotice_btn">
                 <span>예매/취소안내</span>
-               </button>
+              </button>
             </li>
           </ul>
         </div>
@@ -407,11 +373,10 @@
     </div>
   </section>
 
-
 <!-- 공연 상세정보 본문 -->
-<section id="common_section section_content">
-  <div id="detail_tabcontent">
-    <div class="section_detail">
+<section class="common_section section_content" id="detail_information" style="display:block;">
+  <div class="detail_tabcontent">
+    <section class="section_detail">
       <h3 class="contect_subtit"><b>공연시간 정보</b></h3>
       <div class="editor">
         <p>
@@ -565,9 +530,327 @@
             </tbody>
           </table>
         </div>
-    </div>
+    </section>
   </div>
 </section>
+
+
+<!-- 공연정보 관람후기  -->
+<section class="section_product_tabcont section_review" id="review" style="display:none;">
+  <div class="content_heading">
+    <h2 class="content_title">
+      관람후기
+      <span class="text_primary text_number">0</span>
+    </h2>
+    <div class="star_rate">
+      <div class="star">
+        <!-- before -->
+        <span class="star_per" style="width: 0%;">
+        </span>
+      </div>
+      <span class="star_score">
+      <span class="star_current">0.0</span>
+      / 5
+    </span>
+    </div>
+  </div>
+  <div class="comment_write">
+    <div class="comment_notice">
+      <p class="comment_notice_desc">게시판 운영규정에 맞지 않는 글은 사전 통보없이 삭제될 수 있습니다.</p>
+      <a href="http://127.0.0.1:5500/Detailed_Infor(Integrated)/popup.html" target="_blank" class="btn_hyperlink">
+        <!-- before -->
+         게시판 운영규정
+      </a>
+    </div>
+    <div class="comment_form">
+      <div class="comment_content">
+        <div class="comment_star_rate">
+          <span class="blind">별점 5점 중</span>
+          <div class="star_select">
+            <input type="radio" name="star2" id="star2_1" class="star_radio" value="1">
+            <label for="star2_1" class="star_label">
+              <span class="blind">
+                1
+                점
+              </span>
+            </label>
+            <input type="radio" name="star2" id="star2_2" class="star_radio" value="2">
+            <label for="star2_2" class="star_label">
+              <span class="blind">
+                2
+                점
+              </span>
+            </label>
+            <input type="radio" name="star2" id="star2_3" class="star_radio" value="3">
+            <label for="star2_3" class="star_label">
+              <span class="blind">
+                3
+                점
+              </span>
+            </label>
+            <input type="radio" name="star2" id="star2_4" class="star_radio" value="4">
+            <label for="star2_4" class="star_label">
+              <span class="blind">
+                4
+                점
+              </span>
+            </label>
+            <input type="radio" name="star2" id="star2_5" class="star_radio" value="5">
+            <label for="star2_5" class="star_label">
+              <span class="blind">
+                5
+                점
+              </span>
+            </label>
+          </div>
+          <p class="star_desc">별점을 선택해주세요</p>
+        </div>
+        <div class="input_box">
+          <textarea class="comment_textarea" placeholder="관람후기를 남겨보세요!" maxlength="1000"></textarea>
+        </div>
+      </div>
+      <div class="comment_util">
+        <div class="comment_util_right">
+          <div class="comment_length">
+            <span class="current_length">0</span>
+            <span class="limit_length">/1000</span>
+          </div>
+          <div class="comment_btn_box">
+            <button type="button" class="common_btn10 btn_secondary btn_small">등록</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="comment_empty">관람후기를 등록하세요.</p>
+  <div class="paging">
+    <a class="first">
+      맨앞
+      <!-- after -->
+    </a>
+    <a class="prev">
+      이전
+      <!-- after -->
+    </a>
+    <strong>1</strong>
+    <a class="next">
+      다음
+      <!-- after -->
+    </a>
+    <a class="end">
+      맨뒤
+      <!-- after -->
+    </a>
+  </div>
+</section>
+</div>
+</section>
+
+<!-- 공연정보 기대평 -->
+<section class="section_tabcont section_preview" id="preview" style="display:none;">
+  <div class="product_content_heading">
+    <h2 clas="product_content_title">
+      기대평
+      <span class="text_primary text_number">1</span>
+    </h2>
+  </div>
+  <div class="comment_write">
+    <div class="comment_notice">
+      <p class="comment_notice_desc">게시판 운영규정에 맞지 않는 글은 사전 통보없이 삭제될 수 있습니다.</p>
+      <a href="http://127.0.0.1:5500/Detailed_Infor(Integrated)/popup.html" target="_blank" class="btn_hyperlink">
+        <!-- before -->
+        게시판 운영규정
+      </a>
+    </div>
+    <div class="product_comment_form">
+      <div class="product_comment_content">
+        <div class="comment_input_box">
+          <textarea class="comment_textarea1" placeholder="기대평을 남겨보세요!" maxlength="1000"></textarea>
+        </div>
+      </div>
+      <div class="comment_util1">
+        <div class="comment_util_right">
+          <div class="comment_length">
+            <span class="current_length">0</span>
+            <span class="limit_length">/1000</span>
+          </div>
+          <div class="comment_btn_box">
+            <button type="button" class="common_btn10 btn_secondary btn_small">등록</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul class="product_comment_list"> 
+    <li class="product_comment_item">
+      <p class="product_comment_desc">쑤심덕 기대돼요!</p>
+      <div class="product_comment_info">
+        <span class="comment_id">fe***@naver.com</span>
+        <span class="comment_date">
+          <!-- before -->
+           2024.06.11 01:02
+        </span>
+      </div>
+    </li>
+  </ul>
+  <div class="paging">
+    <a class="first">
+      맨앞
+      <!-- after -->
+    </a>
+    <a class="prev">
+      이전
+      <!-- after -->
+    </a>
+    <strong>1</strong>
+    <a class="next">
+      다음
+      <!-- after -->
+    </a>
+    <a class="end">
+      맨뒤
+      <!-- after -->
+    </a>
+  </div>
+</section>>
+
+
+<!-- 공연정보 장소 -->
+<section class="product_tabcont section_place" id="place" style="display:none;">
+  <div class="cont_heading">
+    <h2 class="cont_title">공연장 정보 </h2>
+  </div>
+  <p class="prod_content_desc">
+    장소
+    링크아트센터 페이코홀
+    <br/>
+    주소
+    서울특별시 종로구 대학로14길 29
+    <br>
+    대표번호
+    031-1588-7890
+  </p>
+  <div class="place_map">
+    <div class="map_area" id="mapContainer">
+    </div>
+    <button type="button" class="common_btn50 btn_ghost btn_big">빠른 길찾기</button>
+  </div>
+</section>
+
+
+<!-- 공연정보 예매/취소 안내 -->
+<section class="common_tabcont section_notice" id="productNotice" style="display:none;" style="margin-top: 0;">
+  <h2 class="blind">예매/취소안내</h2>
+  <div class="product_detail_toggle">
+    <button class="detail_toggle_btn" aria-expanded="true">
+      <span class="detail_toggle_title">예매/취소안내</span>
+      <span class="common_icon icon_arrow_down ty_sm">
+        <!-- after -->
+      </span>
+    </button>
+    <div class="detail_toggle_content">
+      <h3 class="detail_toggle_title">티켓 수령안내</h3>
+        <div>
+          <p>
+            <b>(1) 일반배송</b>
+          </p>
+          예매 완료(결제 완료)확인 후, 인편배송으로 영업일 기준 10일 이내 티켓을 수령하실 수 있습니다.
+          <div>티켓을 배송하기 위한 배송료는 고객이 부담합니다.</div>
+          행사 또는 관람일에 따라 일반배송 선택이 제한될 수 있습니다.&ZeroWidthSpace;
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>
+            <b>(2) 현장수령</b>
+          </p>
+          행사 당일 공연 시작 시간 1시간 전 ~ 30분 전까지 행사장 매표소에서 티켓을 수령하실 수 있습니다.
+          <div>현장 매표소에서 예매 완료 SMS 또는 예매번호 및 예매자 정보 확인 후 티켓을 수령할 수 있습니다.</div>
+          <p>기획사 정책 또는 행사일에 따라 현장 수령 방법의 선택이 제한될 수 있습니다.​&ZeroWidthSpace;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          </p>
+        </div>
+      <h3 class="detail_toggle_title">예매 취소안내</h3>
+      <div>
+        <p>예매 당일 취소하는 경우 이외에는 예매수수료는 환불되지 않습니다.</p>
+        <p>&nbsp;</p>
+        <div>
+          티켓 예매 후 7일 이내 취소 시 취소수수료는 부과되지 않습니다.
+        </div>
+        <div>
+          단, 예매 후 7일 이내라도 취소시점이 관람일로부터 10일 이내라면 그에 해당하는 취소수수료가 부과됩니다.
+        </div>
+        <div>
+          <br/>
+        </div>
+        <div>
+          배송 받은 티켓의 반품 접수는 취소가능시간 이내(영업일 기준)에 우편(빠른 등기) 또는 본사 반품을 통해서 입고 완료 건에 한하여 취소 가능하며, 입고 일을 기준으로 취소수수료 적용됩니다.
+        </div>
+        <div>
+          일반우편 또는 택배로 반송 시 발생되는 분실, 지연 도착 등의 문제는 티켓링크에서 책임지지 않으니 이점 유의하시기 바랍니다.
+        </div>
+        <table class="detail_info_tbl mgt15" style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px">
+          <colgroup>
+            <col style="width: 300px;">
+            <col style="width: 450px;">
+          </colgroup>
+        <thead>
+        <tr>
+          <th rowsapn="1" colspan="1" scope="col" style="width: 300px; height: 38px; margin: 0; padding: 0; border: 1px solid rgb(219, 219, 217); text-align: center; height: 36px; background: rgb(219, 219, 217)">
+            관람일 구분
+          </th>
+          <th rowsapn="1" colspan="1" scope="col" style="width: 450px; height: 38px; margin: 0; padding: 0; border: 1px solid rgb(219, 219, 217); text-align: center; height: 36px; background: rgb(219, 219, 217)">
+            취소가능시간
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="width: 330px; height: 42px; margin: 0px; padding: 9px 10px 9px 20px; border: 1px solid rgb(219, 219, 217); line-height: 22px;">
+              일반
+            </td>
+            <td style="width: 450px; height: 42px; margin: 0px; padding: 9px 10px 9px 20px; border: 1px solid rgb(219, 219, 217); line-height: 22px;">
+              관람일 1일전 17:00시까지
+            </td>
+          </tr>
+          <tr>
+          <td style="width: 330px; height: 64px; margin: 0px; padding: 9px 10px 9px 20px; border: 1px solid rgb(219, 219, 217); line-height: 22px;">
+            &ZeroWidthSpace;관람일이 연휴기간이거나 연휴 다음날인 경우&ZeroWidthSpace;
+          </td>
+          <td style="width: 330px; height: 64px; margin: 0px; padding: 9px 10px 9px 20px; border: 1px solid rgb(219, 219, 217); line-height: 22px;">
+              연휴 시작일 1일전 17:00시까지
+              <br/>
+              (연휴기간이 '토요일~화요일'인 경우 금요일 17시까지 취소가능)
+          </td>
+          </tr>
+        </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>일부 공연의 경우 취소 가능 시간이 상이할 수 있습니다.&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&nbsp;</p>
+      </div>
+      <h3 class="detail_toggle_title">티켓 환불안내</h3>
+      <div>
+        <p>예매취소 시 취소수수료와 배송료를 제외한 나머지 금액이 환불 됩니다.</p>
+        <p>취소수수료는 상품별로 상이할 수 있으며 상품 상세정보 하단에서 확인할 수 있습니다. </p>
+        <p>&nbsp;</p>
+        <p>
+          무통장입금으로 결제한 경우 환불처리를 위해 예매자 본인명의의 계좌정보(예금주, 은행, 계좌번호)를 입력해야 하며 접수일로부터 3~5일(영업일기준)이내 환불 받을 수 있습니다. 상품에 따라 환불 시 송금수수료 500원이 부과될 수 있습니다. ​
+        </p>
+        <p>&nbsp;</p>
+        <p>
+          신용카드로 결제한 경우 취소일로부터 3~6일(영업일기준)이내 카드사에서 승인취소를 확인할 수 있습니다. 
+        </p>
+        <p>&nbsp;</p>
+        <div>계좌이체, 실시간 계좌출금으로 결제한 경우 취소 시 1~2일(영업일 기준)이내 환불 됩니다.  </div>
+        <div>휴대폰결제로 결제한 경우 당월 취소 시 즉시 환불되나 익월 취소 시에는 최대 60일까지 소요됩니다. </div>
+        <p>예매권, 상품권으로 결제한 경우 취소 시 즉시 계정으로 환불 됩니다.</p>
+        <p>&nbsp;</p>
+        <p>&ZeroWidthSpace;</p>
+      </div>
+      </div>
+  </div>
+</section>
+
+
 
 <!-- 공연상세정보 밑 추천 -->
   <section class="common_section section_product_recommend">
@@ -839,8 +1122,92 @@
 </div>
 </section>
 
+<!-- JavaScript -->
 
-
+<script>
     
+  $("#detail_information_btn").trigger('click');
+
+  $(function() {
+    $("#detail_information_btn").click(function() {
+      $("#detail_information").css('display', 'block');
+      $("#review").css('display', 'none');
+      $("#preview").css('display', 'none');
+      $("#place").css('display', 'none');
+      $("#productNotice").css('display', 'none');
+
+      $(this).attr('aria-selected', 'true');
+      $("#review_btn").attr('aria-selected', 'false');
+      $("#preview_btn").attr('aria-selected', 'false');
+      $("#place_btn").attr('aria-selected', 'false');
+      $("#productNotice_btn").attr('aria-selected', 'false');
+    })
+  })
+
+  $(function() {
+  $("#review_btn").click(function() {
+      $("#review").css('display', 'block');
+      $("#detail_information").css('display', 'none');
+      $("#preview").css('display', 'none');
+      $("#place").css('display', 'none');
+      $("#productNotice").css('display', 'none');
+
+      $(this).attr('aria-selected', 'true');
+      $("#detail_information_btn").attr('aria-selected', 'false');
+      $("#preview_btn").attr('aria-selected', 'false');
+      $("#place_btn").attr('aria-selected', 'false');
+      $("#productNotice_btn").attr('aria-selected', 'false');
+    })
+  })
+  
+  $(function() {
+  $("#preview_btn").click(function() {
+      $("#preview").css('display', 'block');
+      $("#detail_information").css('display', 'none');
+      $("#review").css('display', 'none');
+      $("#place").css('display', 'none');
+      $("#productNotice").css('display', 'none');
+
+      $(this).attr('aria-selected', 'true');
+      $("#detail_information_btn").attr('aria-selected', 'false');
+      $("#review_btn").attr('aria-selected', 'false');
+      $("#place_btn").attr('aria-selected', 'false');
+      $("#productNotice_btn").attr('aria-selected', 'false');
+    })
+  })
+
+  $(function() {
+  $("#place_btn").click(function() {
+      $("#place").css('display', 'block');
+      $("#detail_information").css('display', 'none');
+      $("#preview").css('display', 'none');
+      $("#review").css('display', 'none');
+      $("#productNotice").css('display', 'none');
+
+      $(this).attr('aria-selected', 'true');
+      $("#detail_information_btn").attr('aria-selected', 'false');
+      $("#preview_btn").attr('aria-selected', 'false');
+      $("#review_btn").attr('aria-selected', 'false');
+      $("#productNotice_btn").attr('aria-selected', 'false');
+    })
+  })
+  
+  $(function() {
+  $("#productNotice_btn").click(function() {
+      $("#productNotice").css('display', 'block');
+      $("#detail_information").css('display', 'none');
+      $("#preview").css('display', 'none');
+      $("#place").css('display', 'none');
+      $("#review").css('display', 'none');
+
+      $(this).attr('aria-selected', 'true');
+      $("#detail_information_btn").attr('aria-selected', 'false');
+      $("#preview_btn").attr('aria-selected', 'false');
+      $("#place_btn").attr('aria-selected', 'false');
+      $("#review").attr('aria-selected', 'false');
+    })
+  })
+</script>
+
 </body>
 </html>
