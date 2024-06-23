@@ -492,18 +492,18 @@ h2 {
   text-align: center;
   font-weight: bold;
 }
-.help_rcont > ul > #tab_on {
+.help_rcont > ul > .tab_on {
   border-top: 1px solid #242428;
   border-bottom: 1px solid #242428;
 }
-.help_rcont > ul > #tab_on > a {
+.help_rcont > ul > .tab_on > a {
   background: #242428;
   color: #fff;
 }
-.help_rcont > ul > #tab_on::before {
+.help_rcont > ul > .tab_on::before {
   background-color: #242428;
 }
-.help_rcont > ul > #tab_on::after {
+.help_rcont > ul > .tab_on::after {
   background-color: #242428;
 }
 .guide_txt {
@@ -516,6 +516,9 @@ h2 {
 }
 .color_point {
   color: #fa2828 !important;
+}
+#exhibition {
+  display: none;
 }
 .reserve_step {
   overflow: hidden;

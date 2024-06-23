@@ -43,6 +43,16 @@ p {
 a {
   text-decoration: none;
 }
+#tabs-1 {
+
+}
+#tabs-2 {
+  display: none;
+}
+#tabs-3 {
+  display: none;
+}
+
 .header_util {
   background-color: #f8f9fa;
   }
@@ -804,14 +814,14 @@ h2 {
   background: #ecedf2;
   content: '';
 }
-.membership_tabs > ul > li#click_on {
+.membership_tabs > ul > li.click_on {
   border-top: 1px solid #242428;
   border-bottom: 1px solid #242428;
 }
-.membership_tabs > ul > li#click_on::before {
+.membership_tabs > ul > li.click_on::before {
   background-color: #242428;
 }
-.membership_tabs > ul > li#click_on > a {
+.membership_tabs > ul > li.click_on > a {
   background: #242428;
   color: #fff;
 }
