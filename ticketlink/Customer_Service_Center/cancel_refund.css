@@ -34,6 +34,12 @@ p {
 a {
   text-decoration: none;
 }
+#tabs-1 {
+  
+}
+#tabs-2 {
+  display: none;
+}
 .header_util {
   background-color: #f8f9fa;
   }
@@ -881,45 +887,129 @@ h2 {
   text-decoration: underline;
   line-height: 24px;
 }
-.find_memlist {
+.info_refund {
+  display: block;
   width: 743px;
-  height: 206px;
+  height: 970px;
+}
+.bank_transfer {
+  width: 743px;
+  height: 137px;
   padding-bottom: 24px;
   border-bottom: 1px dashed #ecedf2;
   margin-top: 28px;
   font-size: 14px;
 }
-.find_memlist > strong {
+.bank_transfer > strong {
   font-size: 16px;
   line-height: 22px;
   letter-spacing: -1px;
   color: #242428;
-  font-weight: 700;
+  font-weight: bold;
 }
-.find_memlist > p {
+.bank_transfer > p {
   line-height: 22px;
   font-size: 14px;
 }
-.find_memlist > p > a {
+.bank_transfer > p > a {
   color: #fa2828;
   text-decoration: underline;
   line-height: 24px;
 }
-.info_memlist {
+.bank_transfer > ul > li {
+  color: #62676c;
+  padding-left: 11px;
+  line-height: 22px;
+  text-indent: -6px;
+  font-size: 14px;
+}
+.card_refund {
   width: 743px;
-  height: 206px;
+  height: 498px;
   padding-bottom: 24px;
   border-bottom: 1px dashed #ecedf2;
   margin-top: 28px;
   font-size: 14px;
 }
-.info_memlist > strong {
+.card_refund > strong {
   margin-top: 20px;
   font-size: 16px;
   line-height: 22px;
   letter-spacing: -1px;
   color: #242428;
+  font-weight: bold;
+}
+.card_refund > p {
+  line-height: 22px;
+  font-size: 14px;
+}
+.card_refund > p > a {
+  color: #fa2828;
+  text-decoration: underline;
+  line-height: 24px;
+}
+.card_refund > ul > li {
+  color: #62676c;
+  padding-left: 11px;
+  line-height: 22px;
+  text-indent: -6px;
+  font-size: 14px;
+}
+.card_refund > img {
+  padding-top: 25px;
+  height: 357px;
+}
+
+.account_transfer {
+  width: 743px;
+  height: 69px;
+  padding-bottom: 24px;
+  border-bottom: 1px dashed #ecedf2;
+  margin-top: 28px;
+  font-size: 14px;
+}
+.account_transfer > strong {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -1px;
+  color: #242428;
   font-weight: 700;
+}
+.account_transfer > p {
+  line-height: 22px;
+  font-size: 14px;
+  padding-bottom: 24px;
+  border-bottom: 1px dashed #ecedf2;
+  margin-top: 28px;
+  font-size: 14px;
+}
+.account_transfer > strong {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -1px;
+  color: #242428;
+  font-weight: 700;
+}
+.account_transfer > p {
+  line-height: 22px;
+  font-size: 14px;
+}
+.ticket_refund {
+  padding-bottom: 24px;
+  border-bottom: 1px dashed #ecedf2;
+  margin-top: 50px;
+  font-size: 14px;
+}
+.ticket_refund > strong {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -1px;
+  color: #242428;
+  font-weight: bold;
+}
+.ticket_refund > p {
+  line-height: 22px;
+  font-size: 14px;
 }
 
 /*  */

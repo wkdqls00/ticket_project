@@ -157,21 +157,21 @@
           <h3 class="info_reserve con_head">회원 정보 안내</h3>
           <div class="membership_tabs widget_content">
             <ul class="member_tab widget" rolelist="tablist">
-              <li class="state_default left_tab tab_widget1 login_tab" role="tab" aria-selected="true" aria-expanded="true" id="click_on">
+              <li class="state_default tab_widget1 login_tab click_on" role="tab" aria-selected="true" aria-expanded="true">
                 <!-- before -->
-                 <a href="#tabs-1" onclick="selectTab(this)" class="n_category ui_tabs1">로그인</a>
+                 <a href="#tabs-1" onclick="selectTab(this)" class="n_category ui_tabs">로그인</a>
                 <!-- after -->
                 </li>
-                <li class="state_default center_tab tab_widget2 update_member" role="tab" aira-selected="false" aria-expanded="false" id="click_off">
-                  <a href="#tab-2" onclick="selectTab(this)" class="n_category ui_tabs2">회원 정보 수정</a>
+                <li class="state_default tab_widget2 update_member" role="tab" aira-selected="false" aria-expanded="false">
+                  <a href="#tabs-2" onclick="selectTab(this)" class="n_category ui_tabs">회원 정보 수정</a>
                 <!-- after -->
                 </li>
-                <li class="state_default right_tab tab_widget3 withdrawl_member"  role="tab" aria-selected="false" aria-expanded="false" id="click_off">
-                  <a href="#tab-3" onclick="selectTab(this)" class="n_category ui_tab3">회원 탈퇴</a>
+                <li class="state_default tab_widget3 withdrawl_member"  role="tab" aria-selected="false" aria-expanded="false">
+                  <a href="#tabs-3" onclick="selectTab(this)" class="n_category ui_tabs">회원 탈퇴</a>
                   <!-- after -->
                 </li>
             </ul>
-            <div class="total_page" id="Login_main">
+            <div class="total_page information" id="tabs-1">
               <div class="join_memlist">
                 <strong>[회원가입]</strong>
                 <p>
@@ -215,7 +215,7 @@
                 </p>
               </div>
             </div>
-            <div class="membership_update" id="Member_update">
+            <div class="membership_update information" id="tabs-2">
               <div class="id_phone_update">
                 <strong>[휴대폰 아이디, 연락처 수정]</strong>
                 <p>회원정보 수정 페이지에서 [변경] 버튼을 클릭하시고, 휴대폰 인증을 하시면 수정이 완료됩니다.</p>
@@ -234,7 +234,7 @@
                 <p>회원정보 수정 페이지에서 [변경] 버튼을 클릭하시고, 주소 정보를 입력하시면 수정이 완료됩니다.</p>
               </div>
             </div>
-            <div class="withdrawl_membership" id="Member_withdrawl">
+            <div class="withdrawl_membership information" id="tabs-3">
               <div class="withdrawl">
                 <div class="wd_info">
                   <strong>그동안 티켓링크 서비스를 이용해주셔서 감사합니다.</strong>
@@ -356,55 +356,25 @@
 </section>
   
 <script>
-  // $(function() {
-  //   $("#Login_btn").click(function() {
-  //     $("#Login_main").css('display', 'block');
-  //     $("#Member_update").css('display', 'none');
-  //     $("#Member_withdrawl").css('display', 'none');
-  //   })
-  //   $("#Update_btn").click(function() {
-  //     $("#Member_update").css('display', 'block');
-  //     $("#Login_main").css('display', 'none');
-  //     $("#Member_withdrawl").css('display', 'none');
-  //   })
-  //   $("#Withdrawl_btn").click(function() {
-  //     $("#Member_withdrawl").css('display', 'block');
-  //     $("#Member_update").css('display', 'none');
-  //     $("#Login_main").css('display', 'none');
-  //   })
-  // })
-
-
-/* const tabList = document.querySelectorAll('.membership_tabs .member_tab li');
-
-for (var i=0; i<tabList.length; i++) {
-	tabList[i].querySelector('.n_category').addEventListener('click',function(e) {
-e.preventDefault();
-for (var j=0; j<tabList.length; i++) {
-tabList[j].classList.remove('login_tab');
-}
-this.parentNode.classList.add('login_tab');
-});
-} */
-
-const tabList= document.querySelectorAll('.membership_tabs .member_tab li');
-const contents= document.querySelectorAll('.help_rcont .total_page .join_memlist')
+const tabList= document.querySelectorAll('.help_rcont .membership_tabs .member_tab li');
+const contents= document.querySelectorAll('.help_rcont .information')
 let activeCont= '';
 
 for (var i=0; i<tabList.length; i++) {
-tabList[i].querySelector('n_category').addEventListener('click', function(e) {
-e.preventDefault();
-for (var j=0; j<tabList.length; j++) {
-tabList[j].classList.remove('.login_tab');
-contents[j].style.display = 'none';
+  tabList[i].querySelector('.ui_tabs').addEventListener('click', function(e) {
+    e.preventDefault();
+    for (var j=0; j<tabList.length; j++) {
+      tabList[j].classList.remove('click_on');
+      contents[j].style.display= 'none';
+    }
+    this.parentNode.classList.add('click_on');
+    activeCont= this.getAttribute('href');
+    document.querySelector(activeCont).style.display= 'block';
+  });
 }
 
-this.parentNode.classList.add('.login_tab');
 
-activeCont = this.getAttribute('href');
-document.querySelector(activeCont).style.display= 'block';
-});
-}
 </script>
+
 </body>
 </html>
