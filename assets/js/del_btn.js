@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    var con = document.querySelectorAll(".style_input")
+    const con = document.querySelectorAll(".style_input")
 
     // 인풋 태그에 입력이 발생할 때
     con.forEach(function(con) {
@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
         input.value = '';
         clearButton.style.display = 'none';
         });
-
     });
 
 });

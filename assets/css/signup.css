@@ -5,6 +5,9 @@ body {
 p {
     margin: 0;
 }
+input::placeholder {
+    letter-spacing: normal !important;
+}
 .input_area .col {
     display: table-cell;
 }
@@ -67,7 +70,7 @@ p {
     background-size: 22px auto;
 }
 .error_text {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 20px;
     color: #dc941b;
     margin-top: 5px;
@@ -87,6 +90,24 @@ p {
 .email .input_box {
     padding-right: 60px;
 }
+.input_box.birth input:first-child {
+    width: 29%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin-left: 10px;
+    letter-spacing: 8px;
+    padding: 0 7px;
+}
+.input_box.birth .input_text.gender {
+    width: 7%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin-left: 1px;
+    padding: 0;
+    text-align: center;
+}
 .input label {
     font-size: 14px;
     line-height: 30px;
@@ -95,7 +116,7 @@ p {
     font-weight: bold;
     letter-spacing: -1px;
 }
-.input_text {
+.input_text, .input_text.agree {
     font-size: 14px;
     line-height: 30px;
     color: #000;
@@ -121,15 +142,34 @@ p {
     box-sizing: border-box;
     border-radius: 6px;
     border: 1px solid #ccc;
-    color: #000;
+    color: white;
     display: inline-block;
     width: auto;
     font-size: 13px;
     height: 30px;
-    background-color: white;
     display: table-cell;
     cursor: pointer;
     white-space: nowrap;
+    pointer-events: none;
+    background-color: #ccc;
+    transition: 1s;
+    opacity: 0.4;
+}
+.btn.address  {
+    min-width: 70px;
+    padding: 0 10px 1px 10px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    width: auto;
+    font-size: 13px;
+    height: 30px;
+    display: table-cell;
+    cursor: pointer;
+    white-space: nowrap;
+    background-color: white;
+    color: #000;
 }
 .checkbox input[type="checkbox"] {
     position: absolute;
@@ -156,7 +196,7 @@ p {
     padding-left: 33px;
     cursor: pointer;
 }
-.checkbox .text::After {
+.checkbox .text::after {
     background: url(//openimage.interpark.com/member/common/icon/icon_check_new.png) 0 0 no-repeat;
     background-size: 100% auto;
     content: "";
@@ -172,13 +212,15 @@ p {
     background-size: 100% auto;
     border-radius: 50%;
 }
+.checkbox input[type="checkbox"]:checked + .text::after {
+    border-color: #1769ff;
+    background-color: #1769ff;
+    background-position: 0 100%;
+}
 .block_text {
     padding: 20px 0;
     font-size: 13px;
     line-height: 22px;
-}
-.btn_area {
-    margin-top: 15px;
 }
 .btn.point {
     background: #ccc;
@@ -260,7 +302,7 @@ p {
     overflow: hidden;
     position: relative;
 }
-.input_box .input_text {
+.input_box .input_text, .input_text_certify {
     font-size: 15px;
     line-height: 30px;
     color: #000;
@@ -303,7 +345,64 @@ p {
     padding: 0 5px;
     font-weight: bold;
 }
+.uError_text {
+    font-size: 12px;
+    line-height: 20px;
+    color: #dc941b;
+    margin-top: 5px;
+    padding: 0 5px;
+}
+.label {
+    font-size: 14px;
+    line-height: 30px;
+    color: #000;
+    float: left;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+.agreeBlock .input_area {
+    border: 0;
+}
+
+
+
+
+
+
+
+
 /* 자바스크립트 연동 효과*/
-.special {
+.btn.border_type.notdisabled {
+    pointer-events: all;
+    background-color: white;
+    color: #000;
+    opacity: 1;
+}
+.btn.point:disabled.special {
     opacity: 0.5;
+}
+.btn.point.special {
+    opacity: 0.5;
+}
+.input_box.birth .del_btn {
+    right: -25px;
+}
+.del_btn {
+    position: absolute;
+    top: 3px;
+    right: 2px;
+    z-index: 2;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    background: url(//openimage.interpark.com/.ui/openId/pc/btn_input_del.png) no-repeat center center #fff;
+    outline: 0;
+    cursor: pointer;
+}
+.text_email + .del_btn {
+    right: 25px;
+}
+.error_text {
+    display: none;
 }
