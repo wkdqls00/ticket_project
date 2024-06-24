@@ -37,7 +37,7 @@
                     </ul>
                 </div> <!--왼쪽 메뉴들-->
             </div>
-            <form action=""> <!--가운데 회원정보들-->
+            <form action="http://www.naver.com"> <!--가운데 회원정보들-->
                 <div class="sub_content_wrap">
                     <h2 class="main_title">회원탈퇴</h2>
                     <div>
@@ -70,7 +70,7 @@
                             <button type="submit" class="btn_white">취소</button>
                         </span>
                         <span>
-                            <button type="submit" class="btn_red">탈퇴</button>
+                            <button type="submit" class="btn_red" onclick="check()">탈퇴</button>
                         </span> 
                     </div> <!--취소, 수정 버튼-->
                 </div>
@@ -180,5 +180,17 @@
     </div>
   </div>
   
+
+  <script>
+    function check() {
+      let checkbox = document.getElementById("agree");
+      if(!checkbox.checked) {
+        alert("동의사항 체크를 해주세요 \n진짜 탈퇴하실건가요?ㅜㅜ");
+        event.preventDefault();
+      } else {
+        alert("탈퇴되었습니다 지금까지 이용해주셔서 감사합니다");
+      }
+    }
+  </script>
 </body>
 </html>
