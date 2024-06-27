@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,9 @@
   <link rel='stylesheet' type='text/css' media='screen' href='/assets/css/band_header.css'>
   <link rel='stylesheet' type='text/css' media='screen' href='/assets/css/band_chat.css'>
   <title>BAND - 채팅</title>
+  <!-- <script src="/socket.io/socket.io.js"></script> -->
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
 </head>
 <body class="skin3">
   <div class="ChatMainLayoutView">
@@ -26,48 +28,10 @@
             <div class="chattingRoomMessageListView">
               <div>
                 <div class="logWrap logEvent">
-                  <time class="time">2024년 6월 10일 월요일</time>
+                  <!-- <time class="time">2024년 6월 10일 월요일</time> -->
                 </div>
+                <!-- 채팅 내역 -->
                 <div class="childViewContainer">
-                  <!-- 본인 채팅 -->
-                  <div class="logWrap logMy">
-                    <div class="msg msgContainer">
-                      <div class="msgMain">
-                        <div class="messageBodyWrap">
-                          <span class="txt">안녕하세요</span>
-                        </div>
-                        <div class="aside">
-                          <div class="msgAside">
-                            <span class="time">오후 2:20</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- 상대 채팅 -->
-                  <div class="logWrap logFriend">
-                    <a href="#" class="uProfile">
-                      <span class="profileInner"></span>
-                    </a>
-                    <span class="pfName">
-                      <button class="author">
-                        치이카와
-                      </button>
-                    </span>
-                    <div class="msg">
-                      <div class="msgMain">
-                        <div class="messageBodyWrap">
-                          <span class="txt">ㅎㅇ</span>
-                        </div>
-                        <div class="aside">
-                          <div class="msgAside">
-                            <div class="read">1 읽음</div>
-                            <div class="time">오후 4:27</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -81,14 +45,15 @@
             <div class="mentions">
               <div></div>
             </div>
-            <textarea cols="20" rows="2" class="commentWrite" placeholder="보낼 메시지를 입력하세요." maxlength="10000"></textarea>
+            <textarea class="commentWrite" id="commentInput" placeholder="보낼 메시지를 입력하세요." maxlength="10000"></textarea>
           </div>
           <div class="submitWrap">
-            <button type="submit" class="uButton writeSubmit">보내기</button>
+            <button class="uButton writeSubmit">보내기</button>
           </div>
         </div>
       </section>
     </div>
   </div>
+  <script src="/assets/js/chat.js"></script>
 </body>
 </html>

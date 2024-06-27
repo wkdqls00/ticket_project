@@ -238,6 +238,10 @@
   zoom: 1;
 }
 
+.logMy .uProfile {
+  display: none;
+}
+
 .logFriend .uProfile {
   position: absolute;
   top: 0;
@@ -254,6 +258,10 @@
   height: 20px;
   background-position: -572px -690px;
   margin: -10px 0 0 -10px;
+}
+
+.logMy .pfName {
+  display: none;
 }
 
 .logFriend .pfName {
