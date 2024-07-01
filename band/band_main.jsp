@@ -1,12 +1,25 @@
+<%@page import="dto.MybandDTO"%>
+<%@page import="dao.MybandDAO"%>
+<%@page import="project.DatabaseUtil"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	int m_idx = Integer.parseInt(request.getParameter("member_idx"));
+	MybandDAO mbDao = new MybandDAO();
+	
+	ArrayList<MybandDTO> mbListDao = mbDao.selectMybandDTO(m_idx);
+%>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/css/band_main.css">
-  <link rel="stylesheet" href="/assets/css/clear.css">
-  <link rel="stylesheet" href="/assets/css/band_header.css"> 
-  <title>Document</title>
+  <link rel="stylesheet" href="../assets/css/band_main.css">
+  <link rel="stylesheet" href="../assets/css/clear.css">
+  <link rel="stylesheet" href="../assets/css/band_header.css"> 
+  <title>BAND - 메인 페이지</title>
 </head>
 <body>
   <div class="wrap">
@@ -110,6 +123,10 @@
             </a>
           </div>
         </li>
+        <!-- 내 밴드 목록 -->
+        <% 
+        for (MybandDTO mbDto : mbListDao) {
+       	%>
         <li class="band_card_item">
           <div id="band_inner">
             <a href="#" class="band_cover_link">
@@ -121,15 +138,18 @@
               </div>
             </div>
             <div id="band_name">
-              <p class="url_text"> ⛳홀리핸드투어⛳빠르고 친절한 상담, 여정을...</p>
+              <p class="url_text"> <%= mbDto.getMeet_name() %> </p>
               <span class="member">
                 멤버
                   <em>228</em>
-                </span>
+               </span>
             </div>
             </a>
           </div>
         </li>
+        <%
+        }
+        %>
       </ul>
     </div>
   <!-- 소모임 메인 화면 -->
@@ -158,7 +178,7 @@
         </span>
       </h3>
     
-        <!-- 소모임 멤버 모집글 -->
+    <!-- 소모임 멤버 모집글 -->
     <div id="band_find_wrap">
         <div id="band_list">
           <div id="band_item_view">
